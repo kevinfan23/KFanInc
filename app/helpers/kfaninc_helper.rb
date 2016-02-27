@@ -1,0 +1,2 @@
+module KfanincHelper
+end
