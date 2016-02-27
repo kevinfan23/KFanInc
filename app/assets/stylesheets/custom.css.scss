@@ -1,8 +1,4 @@
-/* -------------------------------- 
-
-Primary style
-
--------------------------------- */
+/* Primary style */
 *, *::after, *::before {
   box-sizing: border-box;
 }
@@ -21,11 +17,71 @@ em {
 	font-size: 1rem;
 }
 
-/* -------------------------------- 
+/* Nav bar */
+#logo {
+	position: absolute;
+	top: 35%;
+	left: 5%;
+}
+.navbar {
+	height: 50px;
+	padding-bottom: 30px;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: 310;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transform: translateZ(0);
+}
 
-Main Components 
+.navbar li {
+    display: inline-block;
+    margin: 0 5px;
+    transform: scaleX(1.05)
+}
 
--------------------------------- */
+.navbar a:hover{
+    position: relative;
+}
+
+.navbar a:hover:after {
+    content: '';
+    border-bottom: 6px solid white;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    display: block;
+    position: absolute;
+    bottom: -1px; /* moves down 1px over ul border */
+    left: 50%;    
+    margin-left: -6px;  
+}
+
+.navbar a:hover:before{
+    content: '';
+    border-bottom: 7px solid #444;    
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    display: block;
+    position: absolute;
+    bottom: -1px;  /* moves down 1px over ul border */
+    left: 50%;    
+    margin-left: -7px;    
+
+}
+
+
+.navbar a {
+    display: block;
+    color: #000000;
+    padding: 12px 10px;
+    text-decoration: none;
+}
+
+.navbar a:hover, .navbar .active a {
+    color: #E18728;
+}
+
+/* Timeline */
 .cd-horizontal-timeline {
   font-family: "Lato", sans-serif;
   font-size: 10px;
