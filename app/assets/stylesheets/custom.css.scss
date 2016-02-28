@@ -116,28 +116,20 @@ em {
 }
 
 /* Social media & contact effects */
-.social {
-	display: none;
-	z-index: 10;
-	position: absolute;
-}
-
-#contact {
-	z-index: 10;
-}
-
 #rainbow:hover {
 	background: #000000 !important;
 }
 
 nav.social {
   position: absolute;
-  bottom: 20px;
   width: 400px;
   text-align: center;
-  z-index: 10;
   top: 35%;
-  left: 33%;
+  display: none;
+  z-index: 10;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 nav.social a {
