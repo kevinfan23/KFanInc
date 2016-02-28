@@ -24,7 +24,7 @@ var gradientSpeed = 0.005;
 
 	/* Change gradient */
 	setInterval(updateGradient,10);
-	setInterval(contactOverlay, 100);
+	contactOverlay();
         	
 	/* Arrow hover effects */
     $('.cd-timeline-navigation a.next').hover(function(){ $(this).animate({height:'75px'}, 'medium');}, 

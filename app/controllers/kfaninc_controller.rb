@@ -4,4 +4,10 @@ class KfanincController < ApplicationController
 
   def about
   end
+  
+  def utilities
+  end
+  
+  def map 
+  end
 end

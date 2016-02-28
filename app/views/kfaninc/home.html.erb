@@ -11,13 +11,7 @@
 </head>
 <body>
 <div id="overlay"></div>
-<ul class="navbar">
-<a href="http://kfaninc.com"><%= image_tag "logo1.svg", height: "45", :id => "logo"%></a>
-<li><a href="#">About</a></li>
-<li><a href="#">Utilities</a></li>
-<li><a href="#">Map</a></li>
-<li><a href="#" id="contact">Contact</a></li>
-</ul>
+<%= render 'layouts/header' %>
 
 <nav class="social">
       <a href="https://github.com/kevinfan23" id="rainbow" target="_blank"><span class="entypo-github"></span></a>

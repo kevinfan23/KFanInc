@@ -1,2 +1,39 @@
-<h1>Kfaninc#about</h1>
-<p>Find me in app/views/kfaninc/about.html.erb</p>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
+	<title>About | KFanInc</title>
+</head>
+<body>
+<%= render 'layouts/header' %>
+
+<div class="list-switcher main">
+  <div class="list-switcher__lists chunk" id="panel-type">
+    <label>I'd like to hear about...</label>
+    <div class="t-toggle-button">
+      <label class="t-toggle-button__option js-checked">
+        <input name="audience" value="designList" type="radio" checked="checked" id="panel-type_designer">
+        <span>Designers</span>
+      </label>
+      <label class="t-toggle-button__option">
+        <input name="audience" value="devList" type="radio" id="panel-type_developer">
+        <span>Developers</span>
+      </label>
+    </div>
+  </div>
+  <div class="list-switcher__select chunk">
+    <label>Specialized in...</label>
+    <select name="select" id="panel-category" placeholder="Go on, we like a challenge...">
+      <option value="value1">Value 1</option>
+      <option value="value2">Value 2</option>
+      <option value="value3">Value 3</option>
+    </select>
+  </div>
+</div>
+<%= javascript_include_tag "jquery-2.1.4.js", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "about", "data-turbolinks-track" => true %>
+</body>
+</html>
