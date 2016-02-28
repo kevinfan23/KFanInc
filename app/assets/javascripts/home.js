@@ -331,16 +331,10 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
 /* Contact effects */
 function contactOverlay() {
 	$('#contact').on('click', function() {
-		$('#overlay').fadeIn(500);
-		$('.social').fadeIn(500);
+		$('#overlay, .social, .content').fadeIn(500);
 	});
 	
 	$(document).on('click','#overlay',function() {
-        $('#overlay, .social').fadeOut('300',function()
-        {
-            $('#overlay').remove();
-            $('.social').remove();
-        });    
-            return false;
+        $('#overlay, .social, .content').fadeOut(300)
     });
 }

@@ -12,6 +12,7 @@
 <body>
 <div id="overlay"></div>
 <%= render 'layouts/header' %>
+<%= render 'layouts/clock' %>
 
 <nav class="social">
       <a href="https://github.com/kevinfan23" id="rainbow" target="_blank"><span class="entypo-github"></span></a>
@@ -162,5 +163,7 @@ Thanks for writing.  It was good to hear from you!
 <%= javascript_include_tag "jquery-2.1.4.js", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "jquery.mobile.custom.min.js", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "home", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "clock", "data-turbolinks-track" => true %>
+
 </body>
 </html>

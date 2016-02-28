@@ -189,6 +189,62 @@ nav.social a:nth-child(4) {
   left: 75%;
 }
 
+/* Clock */
+.content {
+	display: none;
+	position: absolute;
+    height: 300px;
+    width: 550px;
+	padding:0;
+    top: 65%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+#clock {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    color: #fff;
+    font-size: 80px;
+    position: absolute;
+	left: 10%;
+    top: 20%;
+}
+
+.calendar li {
+	display: block;
+	list-style: none;
+	float: left;
+	padding-right: 10px;
+}
+
+.calendar {
+    position: absolute;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    color: #e2dede;
+    font-size: 20px;
+    padding: 0;
+    top: 5%; 
+    left: 17%;
+}
+
+#day {
+	font-size: 30px;
+	font-weight: 300;
+	left: 5%;
+	margin-top: 15px;
+	margin-left: -30px;
+}
+
+#date {
+	margin-top: 25px;
+}
+
 /* Timeline */
 .cd-horizontal-timeline {
   font-family: "Lato", sans-serif;

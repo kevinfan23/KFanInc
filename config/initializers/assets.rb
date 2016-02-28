@@ -9,6 +9,7 @@ Rails.application.config.assets.precompile += %w( modernizr.js )
 Rails.application.config.assets.precompile += %w( jquery-2.1.4.js )
 Rails.application.config.assets.precompile += %w( jquery.mobile.custom.min.js )
 Rails.application.config.assets.precompile += %w( home.js )
+Rails.application.config.assets.precompile += %w( clock.js )
 Rails.application.config.assets.precompile += %w( about.js )
 Rails.application.config.assets.precompile += %w( cd-arrowright.svg )
 
