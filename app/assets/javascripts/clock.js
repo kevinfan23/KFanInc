@@ -1,25 +1,30 @@
-$(document).ready(function(){
-	displayTime();
-});
+// Time variables
+var currentTime = new Date();
+var day = currentTime.getDay();
+var date = currentTime.getDate();
+var month = currentTime.getMonth();
+var year = currentTime.getFullYear();
+var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
+var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+var meridiem = "AM";
 
+var clockDiv;
+var dayDiv;
+var dateDiv;
+
+$(document).ready(function(){
+	setInterval(displayTime, 1000);
+});
 
 
 function displayTime() {
 	
-	// Time variables
-	var currentTime = new Date();
-	var day = currentTime.getDay();
-	var date = currentTime.getDate();
-	var month = currentTime.getMonth();
-	var year = currentTime.getFullYear();
-	var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'Jully', 'August', 'September', 'October', 'November', 'December');
-	var days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+	currentTime = new Date();
 	
-	var meridiem = "AM"
+	// Get time variables
 	var hours = currentTime.getHours();
 	var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
-	setInterval(displayTime, 1000);
 	
 	// Adding zeros to the digits
 	if (seconds < 10) {
@@ -72,10 +77,10 @@ function displayTime() {
 
 
 	// Render text
-    var clockDiv = document.getElementById('clock');
+    clockDiv = document.getElementById('clock');
 	clockDiv.innerText = hours + ":" + minutes + ":" + seconds + " " + meridiem;
-	var dayDiv = document.getElementById('day');
+	dayDiv = document.getElementById('day');
 	dayDiv.innerText = days[day];
-	var dateDiv = document.getElementById('date');
+	dateDiv = document.getElementById('date');
 	dateDiv.innerText = months[month] + " " + date + ", " + year;
 }
