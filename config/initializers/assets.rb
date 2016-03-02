@@ -5,6 +5,8 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( custom.css )
 Rails.application.config.assets.precompile += %w( reset.css )
+Rails.application.config.assets.precompile += %w( selectize.css )
+
 Rails.application.config.assets.precompile += %w( modernizr.js )
 Rails.application.config.assets.precompile += %w( jquery-2.1.4.js )
 Rails.application.config.assets.precompile += %w( jquery.mobile.custom.min.js )

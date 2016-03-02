@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
+	<%= stylesheet_link_tag "selectize.default", media: "all", "data-turbolinks-track" => true %>  
 	<title>About | KFanInc</title>
 </head>
 <body>
@@ -13,30 +14,32 @@
 
 <div class="list-switcher main">
   <div class="list-switcher_lists chunk" id="panel-type">
-    <label>I'd like to hear from...</label>
+    <label>I'd like to hear about...</label>
     <div class="toggle-button">
       <label class="toggle-button_option js-checked">
         <input name="audience" value="designList" type="radio" checked="checked" id="panel-type_designer">
-        <span>Designers</span>
+        <span>Design</span>
       </label>
       <label class="toggle-button_option">
         <input name="audience" value="devList" type="radio" id="panel-type_developer">
-        <span>Developers</span>
+        <span>Development</span>
       </label>
     </div>
   </div>
   <div class="list-switcher_select chunk">
-    <label>Specialized in...</label>
-    <select name="select" id="panel-category" placeholder="Go on, we like a challenge...">
-      <option value="value1">Value 1</option>
-      <option value="value2">Value 2</option>
-      <option value="value3">Value 3</option>
-    </select>
-  </div>
+				<div class="control-group">
+					<label for="panel-category">Specialized in...</label>
+					<select id="panel-category" class="demo-default" placeholder="Select an area you're interested in...">
+					    <option value="value1">Value 1</option>
+					    <option value="value2">Value 2</option>
+					    <option value="value3">Value 3</option>
+					</select>
+				</div>
+</div>
 </div>
 <%= javascript_include_tag "jquery-2.1.4.js", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "selectize", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "about", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "home", "data-turbolinks-track" => true %>
-<%= javascript_include_tag "https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/js/standalone/selectize.js", "data-turbolinks-track" => true %>
 </body>
 </html>

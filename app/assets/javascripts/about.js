@@ -1,6 +1,9 @@
+$(document).ready(function(){
+	initPanelTypes();
+});
 // Lists
-var designList = [{ text: "Product Design", value: "product_design" }, { text: "User Interface Design", value: "ui" }, { text: "User Experience Design", value: "ux" }, { text: "Branding", value: "branding" }, { text: "Print", value: "print" }];
-var devList = [{ text: "Front End", value: "front_end" }, { text: "Back End", value: "back_end" }, { text: "iOS", value: "ios" }, { text: "Android", value: "android" }, { text: "Dev Ops", value: "devops" }];
+var designList = [{ text: "Product Design", value: "product_design" }, { text: "Graphic Design", value: "graphic_design" }, { text: "Branding", value: "branding" }];
+var devList = [{ text: "Electrical Engineering", value: "electrical_engineering" }, { text: "Front End", value: "front_end" }, { text: "iOS", value: "ios" }];
 var panelChooser = {
   'designList': designList,
   'devList': devList
@@ -30,6 +33,7 @@ function initPanelTypes() {
     });
   }
 }
+
 
 // Toggle Buttons
 $('.toggle-button_option').click(function() {
