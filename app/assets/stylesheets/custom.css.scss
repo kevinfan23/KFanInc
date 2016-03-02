@@ -21,7 +21,6 @@
   font-family: 'entypo', sans-serif;
 }
 
-
 /* Primary style */
 *, *::after, *::before {
   box-sizing: border-box;
@@ -55,11 +54,12 @@ em {
 /* Nav bar */
 #logo {
 	position: absolute;
-	top: 35%;
-	left: 5%;
+	top: 8%;
+	left: 4%;
 }
 .navbar {
 	height: 50px;
+	padding-top: 20px;
 	padding-bottom: 30px;
     text-align: center;
     font-family: 'Lato', sans-serif;
@@ -72,7 +72,7 @@ em {
 .navbar li {
     display: inline-block;
     margin: 0 5px;
-    transform: scaleX(1.05)
+    transform: scaleX(1.05);
 }
 
 .navbar a:hover{
@@ -538,17 +538,18 @@ nav.social a:nth-child(4) {
 }
 
 /* About page toggle search */
-.main {
+.list-switcher {
   font-family: "Lato";
-  font-weight: 300;
-  font-size: 1.1rem;
+  font-weight: 400;
+  font-size: 0.95rem;
   width: 100%;
-  max-width: 640px;
-  margin: auto;
+  max-width: 460px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 label {
@@ -570,23 +571,24 @@ label {
 }
 
 // ===== Toggle Buttons =====
-
 // Button wrapper
-.t-toggle-button {
+.toggle-button {
+  text-transform: capitalize;
 
-  .t-toggle-button__option:first-child {
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
+  .toggle-button_option:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
   }
 
-  .t-toggle-button__option:last-child {
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
+  .toggle-button_option:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
 }
 
 // Individual option in toggle button
-.t-toggle-button__option {
+.toggle-button_option {
+  font-family: "Lato";
   display: inline-block;
   float: left;
   height: auto;
@@ -594,24 +596,24 @@ label {
   padding: 0.875em;
   font: inherit;
   font-weight: 700;
-  color: #a59eb5;
+  color:#7f7f7f;  
+  background: #ececec;
   text-decoration: none;
   text-align: center;
   margin: 0;
   cursor: pointer;
   overflow: visible;
-  border: 2px solid #716894;
-  vertical-align: middle;
+  border:1px solid #a7a7a7;  vertical-align: middle;
+  box-shadow: 0px 2px 1px white inset, 0px -2px 5px white, 0px 2px 3px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
   -webkit-appearance: none;
 
   span {
-    font-size: 14px;
+    font-size: 15px;
   }
 
-  // When checked the button is filled dark purple
   &.js-checked {
-    background-color: #716894;
-    color: #ffffff;
+  background: #ffffff;
+  color: #7f7f7f;
   }
 
   // Hide the radio button
@@ -620,7 +622,10 @@ label {
     opacity: 0;
     z-index: -1; /* Put the input behind the label so it doesn't overlay text */
   }
+}
 
+.toggle-button_option:hover{
+		box-shadow: 0px 2px 1px white inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 @-webkit-keyframes cd-enter-right {
