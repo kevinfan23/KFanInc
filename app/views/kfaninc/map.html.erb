@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
+	<title>About | KFanInc</title>
+</head>
+<body>
+<div id="overlay"></div>
+<%= render 'layouts/header' %>
+<%= render 'layouts/contact' %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+	    
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 80%;
+        margin-top: 105px;
+      }
+      h2 {
+	      font-family: "CG Omega";
+	      font-size: 30px;
+	      font-weight: 200;
+	      text-transform: uppercase;
+	      letter-spacing: 2px;
+	      position: absolute;
+	      margin-top: 70px;
+		  left: 50%;
+		  margin-right: -50%;
+		  transform: translate(-50%, -50%);
+		  padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+	<h2>Listen...</h2>
+    <div id="map"></div>
+    <script>
+
+      var marker;
+
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          center: {lat: 34.052, lng: -118.244}
+        });
+
+		/* Markers */
+        // Zhengzhou
+        marker0 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 34.74661, lng: 113.62533},
+          title: 'Click to zoom'
+        });
+        marker0.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker0.getPosition());
+        });
+        
+		// Los Angeles
+        marker1 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 34.05223, lng: -118.24368},
+          title: 'Click to zoom'
+        }); 
+        marker1.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker1.getPosition());
+        });    
+              
+      // San Francisco
+        marker2 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 37.77493, lng: -122.41942},
+          title: 'Click to zoom'
+        });
+        marker2.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker2.getPosition());
+        });
+        
+        // Milan
+        marker3 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 45.46542, lng: 9.18592},
+          title: 'Click to zoom'
+        });
+        marker3.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker3.getPosition());
+        });
+        
+        // Vienna
+        marker4 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 48.20817, lng: 16.37382},
+          title: 'Click to zoom'
+        });
+        marker4.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker4.getPosition());
+        });
+        
+        // Bangkok
+        marker5 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 13.75633, lng: 100.50177},
+          title: 'Click to zoom'
+        });
+        marker5.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker5.getPosition());
+        });
+        
+        // Hawaii
+        marker6 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 21.30694, lng: -157.85833},
+          title: 'Click to zoom'
+        });
+        marker6.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker6.getPosition());
+        });
+        
+        // istanbul
+        marker7 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 41.00824, lng: 28.97836},
+          title: 'Click to zoom'
+        });
+        marker7.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker7.getPosition());
+        });
+        
+        // Mexico City
+        marker8 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 19.43261, lng: -99.13321},
+          title: 'Click to zoom'
+        });
+        marker8.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker8.getPosition());
+        });
+        
+        // Singapore
+        marker14 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 1.35208, lng: 103.81984},
+          title: 'Click to zoom'
+        });
+        marker14.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker14.getPosition());
+        });
+        
+        // Hong kong
+        marker15 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 22.39643, lng: 114.10950},
+          title: 'Click to zoom'
+        });
+        marker15.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker15.getPosition());
+        });
+        
+         // Malaysia
+        marker16 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 3.139003, lng: 101.68685},
+          title: 'Click to zoom'
+        });
+        marker16.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker16.getPosition());
+        });
+        
+        // Anchorage
+        marker9 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 61.21806, lng: -149.90028},
+          title: 'Click to zoom'
+        });
+        marker9.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker9.getPosition());
+        });
+        
+        // Barrow
+        marker10 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 71.29056, lng: -156.78861},
+          title: 'Click to zoom'
+        });
+        marker10.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker10.getPosition());
+        });
+        
+        // New york
+        marker11 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 40.71278, lng: -74.00594},
+          title: 'Click to zoom'
+        });
+        marker11.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker11.getPosition());
+        });
+        
+        // Chicago
+        marker12 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 41.87811, lng: -87.62980},
+          title: 'Click to zoom'
+        });
+        marker12.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker12.getPosition());
+        });
+        
+        // Portland
+        marker13 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 45.52306, lng: -122.67648},
+          title: 'Click to zoom'
+        });
+        marker13.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker13.getPosition());
+        });
+        
+        // Cambridge
+        marker17 = new google.maps.Marker({
+          map: map,
+          draggable: true,
+          animation: google.maps.Animation.DROP,
+          position: {lat: 42.37362, lng: -71.10973},
+          title: 'Click to zoom'
+        });
+        marker17.addListener('click', function() {
+          map.setZoom(8);
+          map.setCenter(marker17.getPosition());
+        });
+        
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdKge6UcNySGaO8Y5kchHe_gY-dlgXekE&callback=initMap"
+    async defer></script>
+<%= javascript_include_tag "selectize", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "about", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "home", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "clock", "data-turbolinks-track" => true %>
+
+</body>
+</html>
