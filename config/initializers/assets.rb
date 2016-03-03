@@ -14,7 +14,13 @@ Rails.application.config.assets.precompile += %w( selectize.js )
 Rails.application.config.assets.precompile += %w( home.js )
 Rails.application.config.assets.precompile += %w( clock.js )
 Rails.application.config.assets.precompile += %w( about.js )
+Rails.application.config.assets.precompile += %w( jquery.simpleWeather.min.js )
+
 Rails.application.config.assets.precompile += %w( cd-arrowright.svg )
+Rails.application.config.assets.precompile += %w( wind.svg )
+Rails.application.config.assets.precompile += %w( droplet.svg )
+Rails.application.config.assets.precompile += %w( *.svg )
+
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path

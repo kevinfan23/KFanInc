@@ -10,9 +10,11 @@
 	<title>Home | KFanInc</title>
 </head>
 <body>
-<div id="overlay"></div>
+<div id="overlay-contact"></div>
+<div id="overlay-utilities"></div>
 <%= render 'layouts/header' %>
 <%= render 'layouts/contact' %>
+<%= render 'layouts/utilities' %>
     
 <section class="cd-horizontal-timeline">
 	<div class="timeline">
@@ -152,10 +154,8 @@ Thanks for writing.  It was good to hear from you!
 		</ol>
 	</div> <!-- .events-content -->
 </section>
-	
 <%= javascript_include_tag "jquery.mobile.custom.min.js", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "home", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "clock", "data-turbolinks-track" => true %>
-
 </body>
 </html>

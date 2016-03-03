@@ -18,6 +18,19 @@ var colorIndices = [0,1,2,3];
 //transition speed
 var gradientSpeed = 0.005;
 
+/* weather variables */
+var degreeUnit = 'f';
+var local;
+if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        local = position.coords.latitude + ',' + position.coords.longitude;
+        getWeather(local, degreeUnit);
+    });
+}
+else {
+    getWeather('Los Angeles');
+}
+
 /*******    main function    ******/
 	var timelines = $('.cd-horizontal-timeline'),
 		eventsMinDistance = 60;
@@ -25,6 +38,10 @@ var gradientSpeed = 0.005;
 	/* Change gradient */
 	setInterval(updateGradient,10);
 	contactOverlay();
+	utilitiesOverlay();
+	
+	/* weather app */
+	setInterval(updateWeather, 3000); //Update the weather every 3000ms.
         	
 	/* Arrow hover effects */
     $('.cd-timeline-navigation a.next').hover(function(){ $(this).animate({height:'75px'}, 'medium');}, 
@@ -32,7 +49,7 @@ var gradientSpeed = 0.005;
     
     $('.cd-timeline-navigation a.prev').hover(function(){ $(this).animate({height:'25px'}, 'medium');}, 
     function() { $(this).animate({height:'56px'},'medium');});
-
+    
 	(timelines.length > 0) && initTimeline(timelines);
 
 	function initTimeline(timelines) {
@@ -331,10 +348,59 @@ var color2 = "rgb("+r2+","+g2+","+b2+")";
 /* Contact effects */
 function contactOverlay() {
 	$('#contact').on('click', function() {
-		$('#overlay, .social, .content').fadeIn(500);
+		$('#overlay-contact, .social, .content').fadeIn(500);
 	});
 	
-	$(document).on('click','#overlay',function() {
-        $('#overlay, .social, .content').fadeOut(300)
+	$(document).on('click','#overlay-contact',function() {
+        $('#overlay-contact, .social, .content').fadeOut(300)
     });
+}
+
+/* Utilities effects */
+function utilitiesOverlay() {
+	$('#utilities').on('click', function() {
+		$('#overlay-utilities, .twitter-streaming, .weather-app, .instagram-favorite').fadeIn(500);
+	});
+	
+	$(document).on('click','#overlay-utilities',function() {
+        $('#overlay-utilities, .twitter-streaming, .weather-app, .instagram-favorite').fadeOut(300)
+    });
+}
+
+/* Weather.js */
+function updateWeather(){
+	/* Update weather */
+	if (document.getElementById("toggle").checked) {
+		degreeUnit = 'c';
+	}
+	else {
+		degreeUnit = 'f';
+	}
+	getWeather(local, degreeUnit);
+}
+
+function getWeather(location, unit) {	
+		
+	$.simpleWeather({
+    location: location,
+    woeid: '',
+    unit: unit,
+    success: function(weather) {
+	    var city = weather.city;
+        var temp = weather.temp + '&deg;';
+        var wcode = weather.code + '.svg';
+        var wind = '<p>' + weather.wind.speed + '</p><p>' + weather.units.speed + '</p>';
+        var humidity = weather.humidity + ' %';
+  
+		$(".location").html(city);
+        $(".temperature").html(temp);
+        $(".weathericon").val(wcode);
+        $(".windspeed").html(wind);
+        $(".humidity").html(humidity);
+    },
+    
+    error : function(error) {
+            $(".error").html('<p>' + error + '</p>');
+    }
+  });
 }

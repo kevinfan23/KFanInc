@@ -44,10 +44,22 @@ em {
 	font-family: "Garamond";
 	font-size: 1rem;
 }
-/* Overlay style for contect effects */
-#overlay { 
+/* Overlay style for contect&utilities effects */
+#overlay-contact { 
    background: linear-gradient(to left, #485563 , #29323c);
-   opacity: 0.6;
+   opacity: 0.9;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 5;
+   display: none;
+}
+
+#overlay-utilities { 
+   background: linear-gradient(to left, #FFA17F , #00223E);
+   opacity: 0.9;
    width: 100%;
    height: 100%;
    position: absolute;
@@ -240,6 +252,239 @@ nav.social a:nth-child(4) {
 
 #date {
 	margin-top: 25px;
+}
+
+/* Twitter streaming */
+.twitter-streaming {
+	display: none;
+	position: absolute;
+    height: 300px;
+    width: 300px;
+	padding: 0;
+    top: 25%;
+    left: 85%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+/* Weather app */
+.info_bg p {
+  margin-bottom: -.2em;
+}
+
+.climate_bg {
+  position: absolute;
+  top: 0;
+  left: 235px;
+  z-index: 6;
+  width: 163px;
+  height: 149px;
+  border-top-right-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.weathericon {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 1.226993865%;
+  z-index: 5;
+  width: 160px;
+  height: auto;
+  overflow: hidden;
+}
+
+.weather-app {
+  display: none;
+  position: absolute;
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+  margin: 0;
+  color: #fff;
+  top: 5%;
+  left: 3%;
+  width: 398px;
+  height: 208px;
+  border-radius: 10px;
+  background: linear-gradient(rgba(43,  43,  43, 0.8), rgba(74, 74, 74, 0.7)); 
+  box-shadow: 0 20px 40px 0.1px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.weather-app .main {
+	margin-top: 35px;
+	width: 235px;
+}
+
+.dropicon {
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: -3.9110429448%;
+  z-index: 3;
+  width: 41px;
+  height: auto;
+  overflow: hidden;
+}
+
+.not-available, .failed {
+  position: absolute;
+  top: 464px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 248px;
+  min-height: 24px;
+  margin: 0 auto;
+  font: 0.625em/1.38 'Trebuchet MS';
+  color: rgb(0, 0, 0);
+}
+
+.humidity {
+  position: absolute;
+  top: 30%;
+  left: 29px;
+  z-index: 2;
+  width: 46px;
+  min-height: 29px;
+  font-size: 1em;
+  line-height: 1.38;
+  text-align: center;
+  color: #ffffff;
+}
+
+.info_bg {
+  position: absolute;
+  top: 149px;
+  left: 235px;
+  z-index: 4;
+  width: 163px;
+  height: 59px;
+  border-bottom-right-radius: 10px;
+  background-color: rgba(26,177,237, 1);
+}
+
+.location {
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-top: 20px;
+}
+
+.temperature {
+  margin: 0;
+  margin-left: 15px;
+  margin-top: 20px;
+  font-size: 6rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.windicon {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 43.1173312883%;
+  z-index: 1;
+  width: 50px;
+  height: auto;
+  overflow: hidden;
+}
+
+.windspeed {
+  position: absolute;
+  left: 109px;
+  width: 50px;
+  top: 27%;
+  min-height: 29px;
+  font-size: 1em;
+  line-height: 1.38;
+  text-align: center;
+  color: #ffffff;
+}
+
+.windspeed p {
+	margin-top: -5px;
+}
+
+.toggle-degree {
+	top: 85%;
+	left: 49%;
+	position: absolute;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+#toggle {
+	max-height: 0;
+	max-width: 0;
+	opacity: 0;
+}
+
+input#toggle + label {
+  display: block;
+  position: relative;
+  margin-top: -10px;
+  box-shadow: inset 0 0 0px 1px #d5d5d5;
+  height: 16px;
+  width: 30px;
+  border-radius: 8px;
+  color: #575454;
+}
+
+input#toggle + label:before {
+  line-height: 16px;
+  text-align: center;
+  content: "";
+  position: absolute;
+  display: block;
+  height: 16px;
+  width: 16px;
+  top: 0;
+  left: 0;
+  border-radius: 8px;
+  background: rgba(19, 191, 17, 0);
+  transition: all .1s ease;
+  }
+
+input#toggle + label:after {
+  content: 'F';
+  text-align: center;
+  line-height: 16px;
+  position: absolute;
+  display: block;
+  height: 16px;
+  width: 16px;
+  top: 0;
+  left: 0px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .2), 0 2px 4px rgba(0, 0, 0, .2);
+  transition: all 0.1s ease;
+}
+
+input#toggle:checked + label:before {
+  width: 30px;
+  background: rgba(19, 191, 17, 1);
+}
+
+input#toggle:checked + label:after {
+  content: 'C';
+  left: 14px;
+  box-shadow: inset 0 0 0 1px rgba(19, 191, 17, 1), 0 2px 4px rgba(0, 0, 0, .2);
+  transition: all .1s ease;
+ }
+ 
+/* Instagram favorites */
+.instagram-favorite {
+	display: none;
+	position: absolute;
+	top: 37%;
+	left: 5%;
+	z-index: 10;
 }
 
 /* Timeline */
