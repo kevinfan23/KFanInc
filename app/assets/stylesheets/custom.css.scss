@@ -487,6 +487,443 @@ input#toggle:checked + label:after {
 	z-index: 10;
 }
 
+/* AQI gauge */
+.gauge {
+  font-family: "Lato";
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  top: 17%;
+  left:55%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
+}
+
+.gauge_index {
+	position: absolute;
+	margin-top: 150px;
+	margin-left: 92px;
+	color: #fff;
+}
+
+.gauge__values span {
+  width: 180px;
+  position: absolute;
+  color: #fff;
+  left: 12%;
+  top: 48%;
+}
+.yellow .gauge__values, .orange .gauge__values {
+  color: #000;
+}
+
+.gauge_value, .gauge_rating {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+}
+
+.gauge_value {
+  font-size: .5em;
+}
+
+.gauge_rating {
+  font-size: 1.2em;
+  letter-spacing: .1em;
+}
+
+svg {
+  display: block;
+  margin: 1em auto 0;
+}
+
+.outer_ring {
+	fill: none;
+}
+
+.spinner {
+  stroke-width: 2;
+  stroke: rgba(0, 0, 0, 0.1);
+  stroke-miterlimit: 10;
+  transform-origin: 120px 120px;
+  transition: all 1s;
+  box-shadow: 0px 2px 1px white inset, 0px -2px 5px white, 0px 2px 3px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+  fill: #bfbfbf;
+}
+.green .spinner {
+  transform: rotate(75deg);
+  fill: #63ea63;
+
+}
+.yellow .spinner {
+  transform: rotate(125deg);
+  fill: #ffde59;
+
+}
+.orange .spinner {
+  transform: rotate(180deg);
+  fill: #ff7b00;
+
+}
+.red .spinner {
+  transform: rotate(230deg);
+  fill: #d62d20;
+
+}
+.black .spinner {
+  transform: rotate(280deg);
+  fill: #000000;
+
+}
+
+.ring_green {
+  fill: #63ea63;
+  opacity: 0.8;
+
+}
+
+.ring_yellow {
+  fill: #ffde59;
+  opacity: 0.8;
+
+}
+
+.ring_orange {
+  fill: #ff7b00;
+  opacity: 0.8;
+}
+
+.ring_red {
+  fill: #d62d20;
+  opacity: 0.8;
+}
+
+.ring_black {
+  fill: #000000;
+  opacity: 0.8;
+}
+
+/* Loading screen */
+#loading-page {
+  height: 150px;
+  width: 260px;  
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 45%;
+  position: absolute;
+  right: 0;
+  top: 35%;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  z-index: 10;
+  display: none;
+}
+
+#phrase_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  height: 150px;
+  overflow: hidden;
+  width: 260px;
+}
+
+#phrases {
+  -webkit-animation: slide-phrases-upward 20s;
+          animation: slide-phrases-upward 20s;
+}
+
+#loadingCheckCircleSVG-0 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-1 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-2 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-3 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-4 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-5 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-6 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-7 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-8 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckCircleSVG-9 {
+  -webkit-animation: fill-to-white 5000ms;
+          animation: fill-to-white 5000ms;
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+  fill: white;
+  opacity: 0;
+}
+
+#loadingCheckSVG-0 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+}
+
+#loadingCheckSVG-1 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+}
+
+#loadingCheckSVG-2 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+#loadingCheckSVG-3 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+#loadingCheckSVG-4 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+#loadingCheckSVG-5 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+#loadingCheckSVG-6 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 4.5s;
+          animation-delay: 4.5s;
+}
+
+#loadingCheckSVG-7 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 5.5s;
+          animation-delay: 5.5s;
+}
+
+#loadingCheckSVG-8 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 6.5s;
+          animation-delay: 6.5s;
+}
+
+#loadingCheckSVG-9 {
+  -webkit-animation: fill-to-coral 5000ms;
+          animation: fill-to-coral 5000ms;
+  -webkit-animation-delay: 7.5s;
+          animation-delay: 7.5s;
+}
+
+/* Note card*/
+*:focus, *:before:focus, *:after:focus, h2:focus, p:focus {
+  outline: none;
+}
+
+.notes-wrapper .saver-wrap {
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.notes-wrapper {
+  position: absolute;
+  left: 55%;
+  top: 73%;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Source Sans Pro';
+  max-width: 300px;
+  width: 90%;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  z-index: 10;
+  display: none;
+}
+.notes-wrapper .saver-wrap {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.notes-wrapper .saver-wrap .notes-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #D1D3D6;
+  border-radius: 50px;
+  transition: .1s ease-in-out;
+}
+.notes-wrapper .saver-wrap .notes-dot.saved {
+  background-color: #66cc8f;
+  transition: .1s ease-in-out;
+  transition-delay: 2.10s;
+}
+.notes-wrapper .saver-wrap .rest {
+  transform: scale(0);
+  clip: rect(0, 30px, 30px, 15px);
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+}
+.notes-wrapper .saver-wrap .rest.active {
+    animation: animate 1.05s linear 2;
+}
+.notes-wrapper .saver-wrap .rest.active:after {
+    animation: animate2 1.05s linear 2;
+}
+.notes-wrapper .saver-wrap .rest:after {
+  transform: scale(0);
+  clip: rect(0, 30px, 30px, 15px);
+  content: '';
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+}
+.notes-wrapper .notes-title {
+  padding: 25px 30px;
+  padding-right: 60px;
+  font-weight: 600;
+  color: #000C2F;
+  font-size: 13px;
+  text-transform: uppercase;
+  position: relative;
+}
+.notes-wrapper .notes-content {
+  padding: 10px 30px;
+  padding-bottom: 15px;
+  font-weight: 400;
+  color: #666D82;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+.notes-wrapper .notes-content img {
+  width: 90%;
+  border-radius: 5px;
+  margin: 15px 5%;
+}
+.notes-wrapper .notes-line {
+  width: 95%;
+  margin-top: 0 auto;
+  height: 1px;
+  background-color: #CCCED5;
+}
+.notes-wrapper .notes-comment {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 13px;
+  color: #999EAC;
+  position: relative;
+}
+.notes-wrapper .getImg {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  right: -15px;
+  cursor: pointer;
+}
+.notes-wrapper .getImg .material-icons {
+  line-height: 60px;
+  color: #999EAC;
+}
+
 /* Timeline */
 .cd-horizontal-timeline {
   font-family: "Lato", sans-serif;
@@ -959,3 +1396,122 @@ label {
     transform: translateX(0%);
   }
 }
+
+@keyframes fill-to-coral {
+  0% {
+    fill: white;
+  }
+  10% {
+    fill: #7e615f;
+  }
+  100% {
+    fill: #7e615f;
+  }
+}
+
+@keyframes fill-to-white {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-phrases-upward {
+  0% {
+            transform: translateY(0px);
+  }
+  5% {
+            transform: translateY(-50px);
+  }
+  10% {
+            transform: translateY(-100px);
+  }
+  15% {
+            transform: translateY(-150px);
+  }
+  20% {
+            transform: translateY(-200px);
+  }
+  25% {
+            transform: translateY(-250px);
+  }
+  30% {
+            transform: translateY(-300px);
+  }
+  35% {
+            transform: translateY(-350px);
+  }
+  40% {
+            transform: translateY(-400px);
+  }
+  45% {
+            transform: translateY(-450px);
+  }
+  50% {
+            transform: translateY(-500px);
+  }
+  55% {
+            transform: translateY(-550px);
+  }
+  60% {
+            transform: translateY(-600px);
+  }
+  65% {
+            transform: translateY(-650px);
+  }
+  70% {
+            transform: translateY(-700px);
+  }
+  75% {
+            transform: translateY(-750px);
+  }
+  80% {
+            transform: translateY(-800px);
+  }
+  85% {
+            transform: translateY(-850px);
+  }
+  90% {
+            transform: translateY(-900px);
+  }
+  95% {
+            transform: translateY(-950px);
+  }
+  100% {
+            transform: translateY(-1000px);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: rotate(220deg);
+            transform: rotate(220deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    box-shadow: inset #D1D3D6 0 0 0 2px;
+    -webkit-transform: rotate(-140deg);
+            transform: rotate(-140deg);
+  }
+  100% {
+    box-shadow: inset #D1D3D6 0 0 0 2px;
+    -webkit-transform: rotate(140deg);
+            transform: rotate(140deg);
+  }
+}
+
