@@ -10,4 +10,7 @@ class KfanincController < ApplicationController
   
   def map 
   end
+  
+  def graphics
+  end
 end

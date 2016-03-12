@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
+	<%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.css" %> 
+	<%= javascript_include_tag "modernizr.js", "data-turbolinks-track" => true %> 
+	<title>About | KFanInc</title>
+</head>
+<body>
+<div id="overlay-contact"></div>
+<div id="overlay-utilities"></div>
+<%= render 'layouts/header' %>
+<%= render 'layouts/contact' %>
+<%= render 'layouts/utilities' %>
+
+<%= javascript_include_tag "clock", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "home", "data-turbolinks-track" => true %>
+</body>
+</html>

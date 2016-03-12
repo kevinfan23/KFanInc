@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   
   get 'map' => 'kfaninc#map'
   
+  get 'graphics' => 'kfaninc#graphics'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
