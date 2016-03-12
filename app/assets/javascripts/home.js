@@ -68,11 +68,11 @@ $(document).ready(function(){
 	refreshDiv();
 	
 	/* Arrow hover effects */
-    $('.cd-timeline-navigation a.next').hover(function(){ $(this).animate({height:'75px'}, 'medium');}, 
-    function() { $(this).animate({height:'56px'},'medium');});
+    $('.cd-timeline-navigation a.next').hover(function(){ $(this).animate({height:'70px'}, 'medium');}, 
+    function() { $(this).animate({height:'48px'},'medium');});
     
-    $('.cd-timeline-navigation a.prev').hover(function(){ $(this).animate({height:'25px'}, 'medium');}, 
-    function() { $(this).animate({height:'56px'},'medium');});
+    $('.cd-timeline-navigation a.prev').hover(function(){ $(this).animate({height:'30px'}, 'medium');}, 
+    function() { $(this).animate({height:'46px'},'medium');});
     
     (timelines.length > 0) && initTimeline(timelines);
 	showNewContent();
