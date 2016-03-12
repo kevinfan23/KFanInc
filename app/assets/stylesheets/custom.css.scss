@@ -22,7 +22,7 @@
 }
 
 /* Fonts */
-@import url(https://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
 
 @font-face {
     font-family: "CG Omega";
@@ -1195,7 +1195,11 @@ svg {
 .cd-horizontal-timeline .events-content h2 {
   font-weight: 300;
   font-size: 3rem;
-  font-family: 'Lato', sans-serif;
+  -webkit-font-size: 300;
+  -moz-font-size: 300;
+  -ms-font-size: 300;
+  -moz-font-family: 'Lato', sans-serif;
+  font-family: 'Lato', serif;
   line-height: 1.2;
 }
 .cd-horizontal-timeline .events-content em {
