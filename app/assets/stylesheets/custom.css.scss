@@ -24,13 +24,18 @@
 /* Fonts */
 @font-face {
     font-family: "CG Omega";
-    src: url("app/assets/fonts/cg-omega.woff");
+    src: url("app/assets/fonts/cg-omega.ttf");
 }
 
 @font-face {
     font-family: "Helvatica Neue";
     src: url("app/assets/fonts/helvetica-neue.ttf");
 }
+
+@font-face {
+    font-family: "Lato";
+    src: url("app/assets/fonts/lato-regular.ttf");
+    }
 /* Primary style */
 *, *::after, *::before {
   box-sizing: border-box;
