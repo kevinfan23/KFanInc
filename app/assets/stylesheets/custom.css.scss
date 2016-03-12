@@ -22,6 +22,8 @@
 }
 
 /* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 @font-face {
     font-family: "CG Omega";
     src: url("app/assets/fonts/cg-omega.ttf");
@@ -31,11 +33,6 @@
     font-family: "Helvatica Neue";
     src: url("app/assets/fonts/helvetica-neue.ttf");
 }
-
-@font-face {
-    font-family: "Lato";
-    src: url("app/assets/fonts/lato-regular.ttf");
-    }
 /* Primary style */
 *, *::after, *::before {
   box-sizing: border-box;
@@ -499,7 +496,7 @@ input#toggle:checked + label:after {
 
 /* AQI gauge */
 .gauge {
-  font-family: "Lato";
+  font-family: 'Lato', sans-serif;
   position: absolute;
   display: inline-block;
   cursor: pointer;
@@ -1198,7 +1195,7 @@ svg {
 .cd-horizontal-timeline .events-content h2 {
   font-weight: 300;
   font-size: 3rem;
-  font-family: "Lato", serif;
+  font-family: 'Lato', sans-serif;
   line-height: 1.2;
 }
 .cd-horizontal-timeline .events-content em {
@@ -1211,7 +1208,7 @@ svg {
   content: '- ';
 }
 .cd-horizontal-timeline .events-content p {
-  font-family: "Lato", serif;
+  font-family: 'Lato', sans-serif;
   font-weight: 320;
   font-size: 1rem;
   color: #7e7b7b;
@@ -1236,7 +1233,7 @@ svg {
 
 /* About page toggle search */
 .list-switcher {
-  font-family: "Lato";
+  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 0.95rem;
   width: 100%;
@@ -1285,7 +1282,7 @@ label {
 
 // Individual option in toggle button
 .toggle-button_option {
-  font-family: "Lato";
+  font-family: 'Lato', sans-serif;
   display: inline-block;
   float: left;
   height: auto;
