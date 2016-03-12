@@ -26,6 +26,11 @@
     font-family: "CG Omega";
     src: url("app/assets/fonts/cg-omega.woff");
 }
+
+@font-face {
+    font-family: "Helvatica Neue";
+    src: url("app/assets/fonts/helvetica-neue.ttf");
+}
 /* Primary style */
 *, *::after, *::before {
   box-sizing: border-box;
