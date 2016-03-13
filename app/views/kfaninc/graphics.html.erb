@@ -4,7 +4,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
-	<%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.css" %> 
 	<%= javascript_include_tag "modernizr.js", "data-turbolinks-track" => true %> 
 	<title>About | KFanInc</title>
 </head>
@@ -15,7 +14,183 @@
 <%= render 'layouts/contact' %>
 <%= render 'layouts/utilities' %>
 
-<%= javascript_include_tag "clock", "data-turbolinks-track" => true %>
-<%= javascript_include_tag "home", "data-turbolinks-track" => true %>
+	<div id="slider-container">
+		<div id="slider-wrapper">
+			<ul id="image_slider">
+            <li class="graghics">
+              <div class="narrative">
+	    		<h3>Graphical Design</h3>
+				<p>Posters Designed for UCLA IEEE - Eta Kappa Nu (HKN)</p>
+    		  </div>
+    		</li>
+			<li class="graghics">
+              <div class="narrative">
+	    		<h3>// Monotono</h3>
+				<p>Use only monotonous colors to achieve simplicity, a little bit depressing, yet strong, profound thoughts</p>
+    		  </div>
+    		</li>
+            <li class="graghics">
+            	<%= image_tag "slider/ClassPlanning2.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_Interview.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_Escape.jpg" %>
+            </li>
+			<li>
+              <div class="narrative">
+	    		<h3>// Cosmo</h3>
+				<p>Deep, intricate and mysterious shades of the space</p>
+    		  </div>
+    		</li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_HonorMix1.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_HonorMix2.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_Matlab1.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_Matlab1.1.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_Matlab1.2.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/ProfessorLunch_insta.jpg" %>
+            </li>
+            <li>
+              <div class="narrative">
+	    		<h3>// Natura</h3>
+				<p>All natural elements of the earth: ocean, forrest, metal, and the concrete jungle we built to confine our soul</p>
+    		  </div>
+    		</li>
+            <li class="graghics" id="hkn_laurel">
+            	<%= image_tag "slider/HKN_Laurel.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_Week6.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_Kayak.jpg" %>
+            </li>
+            <li class="graghics" id="hkn_5k">
+            	<%= image_tag "slider/HKN_5K.jpg" %>
+            </li>
+            <li class="graghics" id="hkn_cc">
+            	<%= image_tag "slider/HKN_ChallengeCourse.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/MIP_insta.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_Frisbee.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/BruinStartUp.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/GraduatePanel(insta).jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_TI.jpg" %>
+            </li>
+            <li>
+              <div class="narrative">
+	    		<h3>// Colori</h3>
+				<p>Gradients of colors are always my favorite and teasing me to spare another look</p>
+    		  </div>
+    		</li>
+            <li class="graghics">
+            	<%= image_tag "slider/Matlab_1(insta).jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/Matlab_2(insta).jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/TI(insta).jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/ResumeReview(insta).jpg" %>
+            </li>
+            <li>
+              <div class="narrative">
+	    		<h3>// Altri </h3>
+				<p>Miscellaneous designs and memories of the past years with HKN</p>
+    		  </div>
+    		</li>
+            <li class="graghics">
+            	<%= image_tag "slider/Townhall_insta.jpg" %>
+            </li>
+            <li class="graghics" id="hkn_ind">
+            	<%= image_tag "slider/HKN_Induction_fb.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_Intel.jpg" %>
+            </li>
+                        <li class="graghics">
+            	<%= image_tag "slider/ClassPlanning1_insta.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_Halloween.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_LineUp.jpg" %>
+            </li>
+           
+
+        </ul>
+		</div>
+	</div>
+	
+	<div id="navLinks">
+	  <a href="#" id="slider-prev" class="itemControl">prev</a>
+	  <a href="#" id="slider-menu" class="itemControl">menu</a>
+      <ul>
+        <li class="itemLinks" data-pos="0px"></li>
+        <li class="itemLinks" data-pos="-700px"></li>
+        <li class="itemLinks" data-pos="-1400px"></li>
+        <li class="itemLinks" data-pos="-2100px"></li>
+        <li class="itemLinks" data-pos="-2800px"></li>
+        <li class="itemLinks" data-pos="-3500px"></li>
+        <li class="itemLinks" data-pos="-4200px"></li>
+        <li class="itemLinks" data-pos="-4900px"></li>
+        <li class="itemLinks" data-pos="-5600px"></li>
+        <li class="itemLinks" data-pos="-6300px"></li>
+        <li class="itemLinks" data-pos="-7000px"></li>
+        <li class="itemLinks" data-pos="-7700px"></li>
+        <li class="itemLinks" data-pos="-8400px"></li>
+        <li class="itemLinks" data-pos="-9100px"></li>
+        <li class="itemLinks" data-pos="-9800px"></li>
+        <li class="itemLinks" data-pos="-10500px"></li>
+        <li class="itemLinks" data-pos="-11200px"></li>
+        <li class="itemLinks" data-pos="-11900px"></li>
+        <li class="itemLinks" data-pos="-12600px"></li>
+        <li class="itemLinks" data-pos="-13300px"></li>
+        <li class="itemLinks" data-pos="-14000px"></li>
+        <li class="itemLinks" data-pos="-14700px"></li>
+        <li class="itemLinks" data-pos="-15400px"></li>
+        <li class="itemLinks" data-pos="-16100px"></li>
+        <li class="itemLinks" data-pos="-16800px"></li>
+        <li class="itemLinks" data-pos="-17500px"></li>
+        <li class="itemLinks" data-pos="-18200px"></li>
+        <li class="itemLinks" data-pos="-18900px"></li>
+        <li class="itemLinks" data-pos="-19600px"></li>
+        <li class="itemLinks" data-pos="-20300px"></li>
+        <li class="itemLinks" data-pos="-21000px"></li>
+        <li class="itemLinks" data-pos="-21700px"></li>
+        <li class="itemLinks" data-pos="-22400px"></li>
+        <li class="itemLinks" data-pos="-23100px"></li>
+      </ul>
+      <a href="#" id="slider-next" class="itemControl">next</li>
+	</div>
+
+<%= javascript_include_tag "work", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "contact", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "utilities", "data-turbolinks-track" => true %>
+
 </body>
 </html>

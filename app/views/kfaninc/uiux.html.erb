@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
+	<%= javascript_include_tag "modernizr.js", "data-turbolinks-track" => true %> 
+	<title>About | KFanInc</title>
+</head>
+<body>
+<div id="overlay-contact"></div>
+<div id="overlay-utilities"></div>
+<%= render 'layouts/header' %>
+<%= render 'layouts/contact' %>
+<%= render 'layouts/utilities' %>
+
+	<div id="slider-container">
+		<div id="slider-wrapper">
+			<ul id="image_slider">
+            <li class="graghics">
+              <div id="itemOne">
+	    		<h3>Graphical Design</h3>
+				<p>Posters Designed for UCLA IEEE - Eta Kappa Nu (HKN)</p>
+    		  </div>
+    		</li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_HonorMix1.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_HonorMix1.jpg" %>
+            </li>
+            <li class="graghics">
+            	<%= image_tag "slider/HKN_HonorMix1.jpg" %>
+            </li>
+
+        </ul>
+		</div>
+	</div>
+	
+	<div id="navLinks">
+	  <a href="#" id="slider-prev" class="itemControl">prev</a>
+	  <a href="#" id="slider-menu" class="itemControl">menu</a>
+      <ul>
+        <li class="itemLinks" data-pos="0px"></li>
+        <li class="itemLinks" data-pos="-700px"></li>
+        <li class="itemLinks" data-pos="-1400px"></li>
+        <li class="itemLinks" data-pos="-2100px"></li>
+      </ul>
+      <a href="#" id="slider-next" class="itemControl">next</li>
+	</div>
+
+<%= javascript_include_tag "work", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "contact", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "utilities", "data-turbolinks-track" => true %>
+
+</body>
+</html>

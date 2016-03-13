@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   
   get 'graphics' => 'kfaninc#graphics'
   
+  get 'uiux' => 'kfaninc#uiux'
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

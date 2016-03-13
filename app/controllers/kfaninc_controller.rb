@@ -13,4 +13,7 @@ class KfanincController < ApplicationController
   
   def graphics
   end
+  
+  def uiux
+  end
 end
