@@ -16,4 +16,7 @@ class KfanincController < ApplicationController
   
   def uiux
   end
+  
+  def blog
+  end
 end

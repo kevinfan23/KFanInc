@@ -126,7 +126,7 @@ function spinner() {
 
     svg.className = "gauge " + classNames[aqi_color].className;
     title.innerHTML = classNames[aqi_color].title;
-    svg.getElementsByClassName('gauge_index')[0].innerHTML = "API: " + index;     
+    svg.getElementsByClassName('gauge_index')[0].innerHTML = "AQI: " + index;     
 }
 
 function getAQI() {
