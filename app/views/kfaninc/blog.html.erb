@@ -7,13 +7,24 @@
 	<%= javascript_include_tag "modernizr.js", "data-turbolinks-track" => true %> 
 	<title>Blog | KFanInc</title>
 </head>
-<body>
+<body id="blog-body">
 <div id="overlay-contact"></div>
 <div id="overlay-utilities"></div>
-<%= render 'layouts/header' %>
+<%= render 'layouts/header_white' %>
 <%= render 'layouts/contact' %>
 <%= render 'layouts/utilities' %>
 
+<div class="loading">
+	<div class="loading-text">
+		<span class="loading-text-words">M</span>
+		<span class="loading-text-words">Y</span>
+		<span class="loading-text-words"> </span>
+		<span class="loading-text-words">B</span>
+		<span class="loading-text-words">L</span>
+		<span class="loading-text-words">O</span>
+		<span class="loading-text-words">G</span>
+	</div>
+</div>
 
 <%= javascript_include_tag "contact", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "utilities", "data-turbolinks-track" => true %>
