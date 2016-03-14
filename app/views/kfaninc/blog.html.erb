@@ -5,8 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
 	<%= javascript_include_tag "modernizr.js", "data-turbolinks-track" => true %> 
-	<title>Blog | KFanInc</title>
-</head>
+	<% @title = "KFan > About > Blog" %></head>
 <body id="blog-body">
 <div id="overlay-contact"></div>
 <div id="overlay-utilities"></div>
@@ -25,6 +24,7 @@
 		<span class="loading-text-words">G</span>
 	</div>
 </div>
+
 
 <%= javascript_include_tag "contact", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "utilities", "data-turbolinks-track" => true %>

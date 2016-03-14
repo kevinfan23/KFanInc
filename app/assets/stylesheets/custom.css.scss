@@ -1,4 +1,19 @@
-/* If window is smaller than 821px, display the logo only */
+@media screen and (max-width: 900px) {
+    .gauge, .notes-wrapper, .twitter-streaming {
+	    display: none !important;
+    }
+    
+    .weather-app {
+	    left: 30% !important;
+    }
+    
+    #loading-page {
+	    left: 60% !important;
+	    top: 50% !important;
+    }
+}
+
+/* If window is smaller than 750px, display the logo only */
 @media screen and (max-width: 750px) {
     .navbar li a {
         display: none;
@@ -1531,11 +1546,10 @@ label {
 }
 
 .loading {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 25%;
   left: 0;
   width: 100%;
-  height: 100%;
   z-index: -1;
 }
 
@@ -1548,8 +1562,6 @@ label {
   margin: auto;
   text-align: center;
   width: 100%;
-  height: 100px;
-  line-height: 100px;
 }
 .loading-text span {
   display: inline-block;
@@ -1596,6 +1608,58 @@ label {
           animation: blur-text 1.5s 1.2s infinite linear alternate;
 }
 
+/* Blog rows */
+figure.effect-sadie figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
+	content: '';
+	opacity: 0;
+	transform: translate3d(0,50%,0);
+}
+
+figure.effect-sadie h2 {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	color: #484c61;
+	transition: transform 0.35s, color 0.35s;
+	transform: translate3d(0,-50%,0);
+}
+
+figure.effect-sadie figcaption::before,
+figure.effect-sadie p {
+	transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.effect-sadie p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	opacity: 0;
+	transform: translate3d(0,10px,0);
+}
+
+figure.effect-sadie:hover h2 {
+	color: #fff;
+	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+}
+
+figure.effect-sadie:hover figcaption::before ,
+figure.effect-sadie:hover p {
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+
+
+/* Mixin */
 @-webkit-keyframes blur-text {
   0% {
     -webkit-filter: blur(0px);
