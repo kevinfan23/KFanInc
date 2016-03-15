@@ -18,6 +18,8 @@ Rails.application.config.assets.precompile += %w( home.js )
 Rails.application.config.assets.precompile += %w( nav.js )
 Rails.application.config.assets.precompile += %w( about.js )
 Rails.application.config.assets.precompile += %w( work.js )
+Rails.application.config.assets.precompile += %w( portfolio.js )
+
 
 Rails.application.config.assets.precompile += %w( *.png )
 Rails.application.config.assets.precompile += %w( *.svg )

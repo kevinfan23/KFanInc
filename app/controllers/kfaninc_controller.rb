@@ -19,4 +19,7 @@ class KfanincController < ApplicationController
   
   def blog
   end
+  
+  def ee
+  end
 end

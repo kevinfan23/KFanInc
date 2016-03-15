@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'uiux' => 'kfaninc#uiux'
   
   get 'blog' => 'kfaninc#blog'
+  
+  get 'ee' => 'kfaninc#ee'
 
 
   

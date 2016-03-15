@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<%= stylesheet_link_tag "reset", media: "all", "data-turbolinks-track" => true %>  	
+	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
+  	<%= javascript_include_tag "modernizr.js", "data-turbolinks-track" => true %>
+	<% @title = "KFan > About > EE" %></head>
+</head>
+<body>
+<div id="overlay-contact"></div>
+<div id="overlay-utilities"></div>
+<%= render 'layouts/header' %>
+<%= render 'layouts/nav' %>
+<%= render 'layouts/contact' %>
+<%= render 'layouts/utilities' %>
+
+<div class="ee-dropdown">
+<a href="#" id="ee-course">UCLA Electrical Engineering and Computer Engineering Undergraduate Curriculum</a>
+<div class="ee-course-toggler">
+	<ul>
+	<li><p class="legend">*: In progress</p></li>
+	<li><p class="legend">Greyscale: Future coursework</p></li>
+	<li><h3>Math</h3></li>
+	<li><p><span>Mathematics 31A</span> — Differential and Integral Calculus</p></li>
+	<li><p><span>Mathematics 31B</span> — Integration and Infinite Series</p></li>
+	<li><p><span>Mathematics 32A</span> — Calculus of Several Variables</p></li>
+	<li><p><span>Mathematics 32B</span> — Calculus of Several Variables</p></li>
+	<li><p><span>Mathematics 33A</span> — Linear Algebra and Applications</p></li>
+	<li><p><span>Mathematics 33B</span> — Differential Equations</p></li>
+	<li><p><span>* Mathematics 61</span> — Introduction to Discrete Structures</p></li>
+
+	<li><h3>Physics</h3></li>
+	<li><p><span>Physics 1A</span> — Mechanics</p></li>
+	<li><p><span>Physics 1B</span> — Oscillations, Waves, Electric and Magnetic Fields</p></li>
+	<li><p><span>Physics 1C</span> — Electrodynamics, Optics, and Special Relativity</p></li>
+	<li><p><span>Physics 4AL</span> — Mechanics Laboratory</p></li>
+	<li><p><span>Physics 4BL</span> — Electricity and Magnetism Laboratory</p></li>
+
+	<li><h3>Chemistry</h3></li>
+	<li><p><span>Chemistry and Biochemistry 20A — Chemical Structure</p></li>
+		
+	<li><h3>Computer Science</h3></li>
+	<li><p><span>Computer Science 31</span> — Introduction to Computer Science I</p></li>
+	<li><p><span>Computer Science 32</span> — Introduction to Computer Science II</p></li>
+	<li><p><span>Computer Science 33</span> — Introduction to Computer Organization</p></li>
+	<li><p><span>Computer Science 35L</span> — Software Construction Laboratory</p></li>
+	<li><p><span>Computer Science M51A</span> — Logic Design of Digital Systems</p></li>
+	<li><p><span>* Computer Science 111</span> — Operating Systems Principles</p></li>
+	<li><p class="future-course"><span>Computer Science 144</span> — Web Applications</p></li>
+	<li><p class="future-course"><span>Computer Science 180</span> — Introduction to Algorithms and Complexity</p></li>
+
+	<li><h3>Electrical Engineering</h3></li>
+	<li><p><span>Electrical Engineering 2</span> — Physics for Electrical Engineers</p></li>
+	<li><p><span>Electrical Engineering 3</span> — Introduction to Electrical Engineering</p></li>
+	<li><p><span>Electrical Engineering 10</span> (Circuit Theory I) and <span>11L</span> (Circuits Laboratory I)</p></li>
+	<li><p><span>Electrical Engineering 102</span> — Systems and Signals</p></li>
+	<li><p><span>Electrical Engineering 101A</span> — Engineering Electromagnetics</p></li>
+	<li><p><span>Electrical Engineering 110</span> (Circuit Theory II) and <span>111L</span> (Circuits Laboratory II)</p></li>
+	<li><p class="future-course"><span>Electrical Engineering 113</span> — Digital Signal Processing</p></li>
+	<li><p><span>* Electrical Engineering 115A</span> — Analog Electronic Circuits I</p></li>
+	<li><p class="future-course"><span>Electrical Engineering 131A</span> — Probability and Statistics</p></li>
+	<li><p class="future-course"><span>Electrical Engineering 115AL</span> — Analog Electronics Laboratory I</p></li>
+	<li><p class="future-course"><span>Electrical Engineering 121B</span> — Principles of Semiconductor Device Design</p></li>
+	<li><p class="future-course"><span>Electrical Engineering 101B</span> - Electromagnetic Waves</p></li>
+	<li><p class="future-course"><span>Electrical Engineering 132A</span> — Introduction to Communication Systems</p></li>
+	<li><p class="future-course"><span>Electrical Engineering 133A</span> — Mathematics of Design</p></li>
+	<li><p class="future-course"><span>Electrical Engineering 141</span>— Principles of Feedback Control</p></li>
+	<li><p class="future-course"><span>Electrical Engineering 170A</span> — Principles of Photonics</p></li>
+	<li><p class="future-course"><span>Electrical Engineering M117</span> — Computer Networks: Physical Layer</p></li>
+	<li><p class="future-course"><span>Electrical Engineering Design Course x 2</span></p></li>
+	</ul>
+</div>
+</div>
+<%= javascript_include_tag "portfolio", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "nav", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "contact", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "utilities", "data-turbolinks-track" => true %>

@@ -1564,7 +1564,7 @@ label {
 /* Work Slider */
 ::selection {
   color: #fff;
-  background: #000000 !important;
+  background: #57c6e1 !important;
 }
 
 #slider-menu {
@@ -1623,7 +1623,7 @@ label {
 }
 
 .narrative h3 {
-	font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
 	font-weight: 500;
 	font-size: 1.6rem;
 	margin-top: 200px;
@@ -1809,56 +1809,72 @@ label {
           animation: blur-text 1.5s 1.2s infinite linear alternate;
 }
 
-/* Blog rows */
-figure.effect-sadie figcaption::before {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
-	content: '';
-	opacity: 0;
-	transform: translate3d(0,50%,0);
+/* EE Page */
+.ee-dropdown {
+    position: relative;
+    margin-top: 150px;
+    text-align: center;
 }
 
-figure.effect-sadie h2 {
-	position: absolute;
-	top: 50%;
-	left: 0;
-	width: 100%;
-	color: #484c61;
-	transition: transform 0.35s, color 0.35s;
-	transform: translate3d(0,-50%,0);
+#ee-course {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: black;
+    text-decoration: none;
+    position: relative;
+	
+    &:hover {
+	    text-decoration: underline;
+    }
 }
 
-figure.effect-sadie figcaption::before,
-figure.effect-sadie p {
-	transition: opacity 0.35s, transform 0.35s;
+.ee-course-toggler {
+	background: image-url('course-cover1.jpg');
+	filter: greyscale(0%);
+	background-size: cover;
+	overflow: hidden;
+	position: relative;
+	display: none;
+	margin-top: 600px;
+	text-align: center;
+	box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+	width: 80%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%); 
+	
+	h3 {
+    	font-family: 'Lato', sans-serif;
+		text-transform: uppercase;
+		padding: 10px 0;
+	}
+	
+	p {
+		font-family: Courier, 'Corier New', monospace;
+		font-size: 0.9rem;
+		padding: 5px 0;
+	}
+	
+	span {
+		font-weight: bold;
+	}
 }
 
-figure.effect-sadie p {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	padding: 2em;
-	width: 100%;
-	opacity: 0;
-	transform: translate3d(0,10px,0);
+.legend {
+	text-align: left;
+	font-size: 0.8rem !important;
+	color: #c84747;	
+	margin-left: 20px;
 }
 
-figure.effect-sadie:hover h2 {
-	color: #fff;
-	transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+.future-course {
+	color: #a49e9e;
 }
 
-figure.effect-sadie:hover figcaption::before ,
-figure.effect-sadie:hover p {
-	opacity: 1;
-	transform: translate3d(0,0,0);
+.toggle-show {
+	display:block;
 }
-
-
 
 /* Mixin */
 @-webkit-keyframes blur-text {
