@@ -73,7 +73,7 @@ em {
    position: absolute;
    top: 0;
    left: 0;
-   z-index: 5;
+   z-index: 100;
    display: none;
 }
 
@@ -85,7 +85,7 @@ em {
    position: absolute;
    top: 0;
    left: 0;
-   z-index: 5;
+   z-index: 100;
    display: none;
 }
 /* Nav bar */
@@ -93,6 +93,14 @@ em {
 	position: absolute;
 	top: 10%;
 	left: 4%;
+}
+
+#draggable {
+	z-index: 3;
+	cursor: move;
+	position: absolute;
+	margin-left: 90%;
+	margin-top: 5%;
 }
 
 #close {
@@ -167,6 +175,199 @@ em {
     color: #E18728;
 }
 
+/* Sub-navbar */
+.menu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  overflow: hidden;
+  background: -webkit-linear-gradient(left, #fc354c, #0abfbc);
+  background: linear-gradient(to right, rgba(252, 53, 76, 0.95), rgba(10, 191, 188, 0.95));
+  z-index: 3;
+  display: none;
+}
+.menu-toggler {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+.menu-toggler:hover + label, .menu-toggler:hover + label:before, .menu-toggler:hover + label:after {
+  background: white;
+}
+
+.menu-toggler:checked + label {
+  background: transparent;
+}
+.menu-toggler:checked + label:before, .menu-toggler:checked + label:after {
+  top: 0;
+  width: 40px;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+.menu-toggler:checked + label:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.menu-toggler:checked + label:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu-toggler:checked ~ ul .menu-item {
+  opacity: 1;
+  z-index: 4;
+}
+
+.menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+  -webkit-transform: rotate(0deg) translateX(-110px);
+          transform: rotate(0deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+  -webkit-transform: rotate(60deg) translateX(-110px);
+          transform: rotate(60deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+  -webkit-transform: rotate(120deg) translateX(-110px);
+          transform: rotate(120deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+  -webkit-transform: rotate(180deg) translateX(-110px);
+          transform: rotate(180deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+  -webkit-transform: rotate(240deg) translateX(-110px);
+          transform: rotate(240deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+  -webkit-transform: rotate(300deg) translateX(-110px);
+          transform: rotate(300deg) translateX(-110px);
+}
+.menu-toggler:checked ~ ul .menu-item a {
+  pointer-events: auto;
+}
+
+.menu-toggler + label {
+  width: 40px;
+  height: 5px;
+  display: block;
+  border-radius: 2.5px;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-transition: top 0.5s, -webkit-transform 0.5s;
+  transition: top 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, top 0.5s;
+  transition: transform 0.5s, top 0.5s, -webkit-transform 0.5s;
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 5;
+}
+.menu-toggler + label:before, .menu-toggler + label:after {
+  width: 40px;
+  height: 5px;
+  display: block;
+  border-radius: 2.5px;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-transition: top 0.5s, -webkit-transform 0.5s;
+  transition: top 0.5s, -webkit-transform 0.5s;
+  transition: transform 0.5s, top 0.5s;
+  transition: transform 0.5s, top 0.5s, -webkit-transform 0.5s;
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.menu-toggler + label:before {
+  top: 10px;
+}
+.menu-toggler + label:after {
+  top: -10px;
+}
+
+.menu-item:nth-child(1) a {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.menu-item:nth-child(2) a {
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+.menu-item:nth-child(3) a {
+  -webkit-transform: rotate(-120deg);
+          transform: rotate(-120deg);
+}
+
+.menu-item:nth-child(4) a {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.menu-item:nth-child(5) a {
+  -webkit-transform: rotate(-240deg);
+          transform: rotate(-240deg);
+}
+
+.menu-item:nth-child(6) a {
+  -webkit-transform: rotate(-300deg);
+          transform: rotate(-300deg);
+}
+
+.menu-item {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  display: block;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu-item a {
+  display: block;
+  width: inherit;
+  height: inherit;
+  line-height: 80px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 40px;
+  pointer-events: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+.menu-item a:hover {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+  color: white;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 44.44444px;
+}
+
+
 /* Social media & contact effects */
 #rainbow:hover {
 	background: #000000 !important;
@@ -178,7 +379,7 @@ nav.social {
   text-align: center;
   top: 35%;
   display: none;
-  z-index: 10;
+  z-index: 999;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
@@ -244,7 +445,7 @@ nav.social a:nth-child(4) {
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 999;
 	font-family: 'Helvetica Neue', 'Open Sans Pro', Helvetica, sans-serif;
 }
 
@@ -300,7 +501,7 @@ nav.social a:nth-child(4) {
     left: 85%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+	z-index: 999;
 }
 
 /* Weather app */
@@ -312,7 +513,7 @@ nav.social a:nth-child(4) {
   position: absolute;
   top: 0;
   left: 235px;
-  z-index: 6;
+  z-index: 9;
   width: 163px;
   height: 149px;
   border-top-right-radius: 10px;
@@ -324,7 +525,7 @@ nav.social a:nth-child(4) {
   position: absolute;
   top: -5px;
   left: 1.226993865%;
-  z-index: 5;
+  z-index: 200;
   width: 160px;
   height: auto;
   overflow: hidden;
@@ -344,7 +545,7 @@ nav.social a:nth-child(4) {
   border-radius: 10px;
   background: linear-gradient(rgba(43,  43,  43, 0.8), rgba(74, 74, 74, 0.7)); 
   box-shadow: 0 20px 40px 0.1px rgba(0, 0, 0, 0.3);
-  z-index: 10;
+  z-index: 999;
 }
 
 .weather-app .main {
@@ -519,7 +720,7 @@ input#toggle:checked + label:after {
 	position: absolute;
 	top: 37%;
 	left: 5%;
-	z-index: 10;
+	z-index: 999;
 }
 
 /* AQI gauge */
@@ -533,7 +734,7 @@ input#toggle:checked + label:after {
   left:55%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 999;
   display: none;
 }
 
@@ -656,7 +857,7 @@ svg {
   top: 35%;
   -webkit-transition: opacity 1s;
   transition: opacity 1s;
-  z-index: 10;
+  z-index: 999;
   display: none;
 }
 
@@ -863,7 +1064,7 @@ svg {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  z-index: 10;
+  z-index: 999;
   display: none;
 }
 .notes-wrapper .saver-wrap {
@@ -977,7 +1178,7 @@ svg {
 }
 .cd-horizontal-timeline.loaded {
   /* show the timeline after events position has been set (using JavaScript) */
-  margin-top: 270px;
+  margin-top: 230px;
   opacity: 1;
 }
 .cd-horizontal-timeline .timeline {
@@ -997,7 +1198,6 @@ svg {
   /* these are used to create a shadow effect at the sides of the timeline */
   content: '';
   position: absolute;
-  z-index: 2;
   top: 0;
   height: 100%;
   width: 20px;
@@ -1006,7 +1206,6 @@ svg {
 .cd-horizontal-timeline .events {
   /* this is the grey line/timeline */
   position: absolute;
-  z-index: 1;
   left: 0;
   top: 49px;
   height: 2px;
@@ -1019,7 +1218,6 @@ svg {
 .cd-horizontal-timeline .filling-line {
   /* this is used to create the green line filling the timeline */
   position: absolute;
-  z-index: 1;
   left: 0;
   top: 0;
   height: 100%;
@@ -1369,7 +1567,6 @@ label {
 	position: absolute;
 	left: 0%;
 	top: 0;
-	
 	text-decoration: underline;
 }
 

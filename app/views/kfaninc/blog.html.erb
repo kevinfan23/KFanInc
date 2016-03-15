@@ -10,6 +10,7 @@
 <div id="overlay-contact"></div>
 <div id="overlay-utilities"></div>
 <%= render 'layouts/header_white' %>
+<%= render 'layouts/nav' %>
 <%= render 'layouts/contact' %>
 <%= render 'layouts/utilities' %>
 
@@ -25,7 +26,7 @@
 	</div>
 </div>
 
-
+<%= javascript_include_tag "nav", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "contact", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "utilities", "data-turbolinks-track" => true %>
 </body>

@@ -15,6 +15,7 @@ Rails.application.config.assets.precompile += %w( selectize.js )
 Rails.application.config.assets.precompile += %w( contact.js )
 Rails.application.config.assets.precompile += %w( utilities.js )
 Rails.application.config.assets.precompile += %w( home.js )
+Rails.application.config.assets.precompile += %w( nav.js )
 Rails.application.config.assets.precompile += %w( about.js )
 Rails.application.config.assets.precompile += %w( work.js )
 

@@ -284,6 +284,7 @@ function utilitiesOverlay() {
 	});
 	
 	$(document).on('click','#overlay-utilities',function() {
-        $('#overlay-utilities, .twitter-streaming, .weather-app, .instagram-favorite, .gauge, #loading-page, .notes-wrapper').fadeOut(300)
+        $('#overlay-utilities, .twitter-streaming, .weather-app, .instagram-favorite, .gauge, #loading-page, .notes-wrapper').fadeOut(300);
+        $(".menu").fadeOut(300);
     });
 }
