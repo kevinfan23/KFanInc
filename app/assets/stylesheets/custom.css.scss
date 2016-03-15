@@ -1876,6 +1876,27 @@ label {
 	display:block;
 }
 
+// Progress Bar 
+.progress {
+  width: 24em;
+  height: 5px;
+}
+
+.progress-wrap {
+  overflow: hidden;
+  background: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+  position: absolute;
+  margin-top: 25px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.progress-wrap .progress-bar {
+  position: absolute;
+  background: #e5e9eb;
+  left: 0;
+  top: 0;
+}
+
 /* Mixin */
 @-webkit-keyframes blur-text {
   0% {
