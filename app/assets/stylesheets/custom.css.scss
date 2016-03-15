@@ -186,8 +186,12 @@ em {
   left: 0;
   margin: auto;
   overflow: hidden;
-  background: -webkit-linear-gradient(left, #fc354c, #0abfbc);
-  background: linear-gradient(to right, rgba(252, 53, 76, 0.95), rgba(10, 191, 188, 0.95));
+
+
+background: #E6DADA; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, rgba(230, 218, 218, 0.9) , rgba(39, 64, 70, 0.9)); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, rgba(230, 218, 218, 0.9) , rgba(39, 64, 70, 0.9)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
   z-index: 3;
   display: none;
 }
