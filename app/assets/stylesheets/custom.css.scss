@@ -1,4 +1,4 @@
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
     .gauge, .notes-wrapper, .twitter-streaming {
 	    display: none !important;
     }
@@ -10,6 +10,10 @@
     #loading-page {
 	    left: 60% !important;
 	    top: 50% !important;
+    }
+    
+    .web-des {
+	    display: none;
     }
 }
 
@@ -28,6 +32,10 @@
 		width:auto;
 	    vertical-align: middle;
     }
+    
+    p.url {
+	    display: none;
+    }
 }
 
 /* Include social media icons */
@@ -39,7 +47,8 @@
 
 /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,500,200);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic);
 
 @font-face {
     font-family: "Helvatica Neue";
@@ -1897,6 +1906,127 @@ label {
   top: 0;
 }
 
+/* Web Development Page */
+.web-list {
+	position: absolute;
+	margin-top: 360px;
+	left: 50%;
+	width: 95%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: block;
+    
+    p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;    
+    margin-top: 30px;
+    }
+}
+
+.project-container {
+	height: 420px;
+}
+
+.web-title {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 2rem;
+    
+    p {
+	    line-height: 20px;
+    }
+}
+.web-des {
+	position: absolute;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 230px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+p.url {
+	position: absolute;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 260px;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+.web-list ul {
+	text-align: center;
+	margin-top: 10px;
+}
+.web-list ul li {
+	width: 310px;
+	display: inline-block;
+	margin: 0;
+	padding: 50px 0;
+}
+
+.web-list-container {
+	height: 300px;
+	width: 20%;
+	min-width: 280px;
+	position: absolute;
+	text-align: center;
+}
+
+.web-list ul li a {
+	float: left;
+}
+
+.web-hover {
+	max-width: 20%;
+}
+
+.browser-wrapper {
+	padding: 15px 0 0 0;
+	border-radius: 3px;
+	background: #ddd;
+	display: inline-block;
+	position: relative;
+    width: 280px;
+    height: 194px; 
+    -webkit-box-shadow: 1px 1px 4px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 4px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 4px 0px rgba(50, 50, 50, 0.75);
+
+}
+
+.browser-wrapper .browser-navigation-bar {
+	display: block;
+	height: 15px;
+	position: absolute;
+	top: 4px;
+	left: 1px;
+}
+ 
+.browser-wrapper i {
+	height: 5px;
+	width: 5px;
+	border-radius: 5px;
+	background-color: #eee;
+	border: 1px solid #dadada;
+	float: left;
+	margin: 0 0 0 4px;
+}
+
+.browser-wrapper img {
+	width: 100%;
+}
+
+.browser-wrapper i:nth-child(1) {background-color: rgb(255, 86, 79)}
+
+.browser-wrapper i:nth-child(2) {background-color: rgb(255, 183, 42)}
+
+.browser-wrapper i:nth-child(3) {background-color: rgb(37, 198, 58)}
+
+  
 /* Mixin */
 @-webkit-keyframes blur-text {
   0% {

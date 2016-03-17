@@ -16,4 +16,3 @@ function initProgressBar() {
         left: progressTotal
     }, 1500);
 }
-

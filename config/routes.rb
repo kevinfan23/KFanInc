@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   get 'blog' => 'kfaninc#blog'
   
   get 'ee' => 'kfaninc#ee'
+  
+  get 'web' => 'kfaninc#web'
+
 
 
   

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<%= stylesheet_link_tag "reset", media: "all", "data-turbolinks-track" => true %>  	
+	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
+	<%= stylesheet_link_tag "hover-min", media: "all", "data-turbolinks-track" => true %>  	
+  	<%= javascript_include_tag "modernizr.js", "data-turbolinks-track" => true %>
+	<% @title = "KFan > About > Web" %></head>
+</head>
+<body>
+<div id="overlay-contact"></div>
+<div id="overlay-utilities"></div>
+<%= render 'layouts/header' %>
+<%= render 'layouts/nav' %>
+<%= render 'layouts/contact' %>
+<%= render 'layouts/utilities' %>
+
+
+<section class="web-list">
+	<div class="project-container">
+	<h3 class="web-title">Projects</h3>
+	<p>The journey is the reward and I love the feeling of being on adventure every day</p>
+<ul>
+<li>
+<div class="web-list-container">
+<a class="web-hover hvr-float" href="http://lachariteconstructioninc.com" target="_blank">
+	<div class="browser-wrapper">
+	  <div class="browser-navigation-bar">
+	  	<i></i>
+	  	<i></i>
+	  	<i></i>
+   	  </div>
+      <div class="browser-container">
+	   <%= image_tag "laCharite.jpg" %>
+      </div>
+    </div>
+</a>
+<h3 class="web-des">// First Project</h3>
+<p class="url">lachariteconstructioninc.com</p>
+</div>
+</li>
+
+<li>
+<div class="web-list-container">
+<a class="web-hover hvr-float" href="http://kfaninc.com" target="_blank">
+	<div class="browser-wrapper">
+	  <div class="browser-navigation-bar">
+	  	<i></i>
+	  	<i></i>
+	  	<i></i>
+   	  </div>
+      <div class="browser-container">
+	   <%= image_tag "kfaninc.gif" %>
+      </div>
+    </div>
+</a>
+<h3 class="web-des">// Personal Website</h3>
+<p class="url">kfaninc.com</p>
+</div>
+</li>
+
+<li>
+<div class="web-list-container">
+<a class="web-hover hvr-float" href="#" target="_blank">
+	<div class="browser-wrapper">
+	  <div class="browser-navigation-bar">
+	  	<i></i>
+	  	<i></i>
+	  	<i></i>
+   	  </div>
+      <div class="browser-container">
+	   <%= image_tag "kfat-web.jpg" %>
+      </div>
+    </div>
+</a>
+<h3 class="web-des">// Birthday Gift</h3>
+<p class="url">kmcalexander.me</p>
+</div>
+</li>
+</ul>
+	</div>
+
+</section>
+
+<%= javascript_include_tag "portfolio", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "nav", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "contact", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "utilities", "data-turbolinks-track" => true %>

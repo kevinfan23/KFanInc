@@ -22,4 +22,7 @@ class KfanincController < ApplicationController
   
   def ee
   end
+  
+  def web
+  end
 end
