@@ -64,7 +64,7 @@
 
 <li>
 <div class="web-list-container">
-<a class="web-hover hvr-float" href="#" target="_blank">
+<a class="web-hover hvr-float" href="http://kmcalexander.me" target="_blank">
 	<div class="browser-wrapper">
 	  <div class="browser-navigation-bar">
 	  	<i></i>
@@ -81,8 +81,40 @@
 </div>
 </li>
 </ul>
-	</div>
+</div>
+</section>
 
+<section class="widget-list">
+	<h3 class="web-title">Widgets</h3>
+	<p>The beauty of design is starting with something little, and constantly building on to it</p>
+<div class="widget-wrapper">
+	<ul>
+		<li class="widget-container hvr-hang">
+			<a href="#">
+				<div id="widget-gauge">
+					<p class="widget-title">Air Quality Index Gauge</p>
+					<%= image_tag "widgets/gauge.png" %>
+					<p class="widget-des">The air quality of current location, using Breezemeter&reg API</p>
+				</div>
+			</a>
+		</li>
+		<li class="widget-container hvr-hang">
+			<a href="#">
+				<div id="widget-weather">
+					<p class="widget-title">Weather App</p>
+					<%= image_tag "widgets/weather.png" %>
+					<p class="widget-des">The weather conditions of current location, using YAHOO! Weather&reg API. Conversions between Celsius and Fahrenheit was also implemented for international users</p>
+				</div>
+			</a>
+		</li>
+		<li class="widget-container hvr-hang">
+			<a href="#">
+				<div>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
 </section>
 
 <%= javascript_include_tag "portfolio", "data-turbolinks-track" => true %>

@@ -47,7 +47,7 @@
 
 /* Fonts */
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,100);
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,500,200);
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,500);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic);
 
 @font-face {
@@ -1929,8 +1929,8 @@ label {
 
 /* Web Development Page */
 .web-list {
-	position: absolute;
-	margin-top: 360px;
+	position: relative;
+	margin-top: 320px;
 	left: 50%;
 	width: 95%;
     transform: translate(-50%, -50%);
@@ -2047,7 +2047,95 @@ p.url {
 
 .browser-wrapper i:nth-child(3) {background-color: rgb(37, 198, 58)}
 
-  
+// Web page widgets
+.widget-list {
+	position: relative;
+	text-align: center;
+	height: 700px;
+	
+	h3 {
+		margin-top: -100px;
+	}
+	
+    p {
+    	font-family: 'Lato', sans-serif;
+		font-weight: 400;
+		font-size: 1rem;    
+		margin-top: 30px;
+    }	
+}
+
+.widget-wrapper {
+	width: 95%;
+	height: 500px;
+	position: relative;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 300px;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+
+.widget-container {
+	height: 450px;
+	width: 380px;
+	margin: 0 20px;
+	display: inline-block;
+	cursor: pointer;
+	text-align: center;
+	
+	div {
+		height: 450px;
+		width: 380px;
+		border-radius: 5px;
+		-webkit-box-shadow: 2px 2px 4px 0px rgba(50, 50, 50, 0.75);
+		-moz-box-shadow:    2px 2px 4px 0px rgba(50, 50, 50, 0.75);
+		box-shadow:         2px 2px 4px 0px rgba(50, 50, 50, 0.75);
+		background: #f8f5f5;
+		white-space: normal;
+		
+		.widget-title {
+			font-family: 'Source Sans Pro', sans-serif;
+			text-transform: uppercase;
+			font-size: 0.9rem;
+			font-weight: bold;
+			position: absolute;
+			margin-left: 20px;
+			margin-top: 20px;
+			color: #fff;
+		}
+		
+		.widget-des {
+			position: absolute;
+			font-size: 0.95rem;
+			color: #fff;
+			line-height: 20px;
+			top: 300px;
+			width: 350px;
+			left: 50%;
+			margin-left: -46%;			
+		}
+	}
+	
+	#widget-gauge {
+		background: radial-gradient(ellipse farthest-corner at center bottom, #6beace, #2e9aa4);
+		
+		img {
+			width: 250px;
+			margin-top: 90px;
+		}
+	}
+	
+		#widget-weather {
+			background: linear-gradient(135deg, rgba(232, 144, 142, 1) 0%,#2a8be4 100%);		
+		img {
+			width: 300px;
+			margin-top: 120px;
+		}
+	}
+	
+}
+
 /* Mixin */
 @-webkit-keyframes blur-text {
   0% {
