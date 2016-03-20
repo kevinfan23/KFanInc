@@ -3,7 +3,7 @@ $(document).ready(function(){
 });
 
 // Lists
-var designList = [{ text: "UI/UX", value: "http://www.kfaninc.com/uiux" }, { text: "Graphical Design", value: "http://www.kfaninc.com/graphics" }, { text: "Writing, Speech and More", value: "http://www.kfaninc.com/blog" }];
+var designList = [{ text: "Print", value: "http://www.kfaninc.com/print" }, { text: "Graphical Design", value: "http://www.kfaninc.com/graphics" }];
 var devList = [{ text: "Electrical Engineering", value: "http://www.kfaninc.com/ee" }, { text: "Front End", value: "http://www.kfaninc.com/web" }, { text: "iOS", value: "ios" }];
 var panelChooser = {
   'designList': designList,

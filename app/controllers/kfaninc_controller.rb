@@ -14,7 +14,7 @@ class KfanincController < ApplicationController
   def graphics
   end
   
-  def uiux
+  def print
   end
   
   def blog

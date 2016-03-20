@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   
   get 'graphics' => 'kfaninc#graphics'
   
-  get 'uiux' => 'kfaninc#uiux'
+  get 'print' => 'kfaninc#print'
   
   get 'blog' => 'kfaninc#blog'
   

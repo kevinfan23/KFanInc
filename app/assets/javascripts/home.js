@@ -7,6 +7,8 @@ var timelines = $('.cd-horizontal-timeline'),
 /*******    main function    ******/
 $(document).ready(function(){
 	
+	/* Instruction page loading */
+	insnsOverlay();
 	/* Arrow hover effects */
     $('.cd-timeline-navigation a.next').hover(function(){ $(this).animate({height:'70px'}, 'medium');}, 
     function() { $(this).animate({height:'48px'},'medium');});
@@ -269,4 +271,10 @@ function elementInViewport(el) {
 function checkMQ() {
 	//check if mobile or desktop device
 	return window.getComputedStyle(document.querySelector('.cd-horizontal-timeline'), '::before').getPropertyValue('content').replace(/'/g, "").replace(/"/g, "");
+}
+
+function insnsOverlay() {
+	$(document).on('click','#insns-overlay-wrapper', function() {
+        $('#insns-overlay-wrapper').fadeOut(300);
+    });
 }

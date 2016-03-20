@@ -73,7 +73,7 @@ em {
 	font-family: "Garamond";
 	font-size: 1rem;
 }
-/* Overlay style for contect&utilities effects */
+/* Overlay style for contect, utilities and instructions effects */
 #overlay-contact { 
    background: linear-gradient(to left, #485563 , #29323c);
    opacity: 0.9;
@@ -97,6 +97,27 @@ em {
    z-index: 100;
    display: none;
 }
+
+.utilities-button {
+	z-index: 999;
+	width: 200px;
+	height: auto;
+	position: absolute;
+	margin-left: 75%;
+	margin-top: 8%;
+}
+
+#insns-overlay-wrapper {
+   background: linear-gradient(to left, #485563 , #29323c);
+   opacity: 0.9;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 100;
+}
+
 /* Nav bar */
 #logo {
 	position: absolute;
@@ -105,7 +126,7 @@ em {
 }
 
 #draggable {
-	z-index: 3;
+	z-index: 5;
 	cursor: move;
 	position: absolute;
 	margin-left: 90%;
