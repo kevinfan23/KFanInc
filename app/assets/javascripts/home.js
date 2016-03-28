@@ -7,8 +7,9 @@ var timelines = $('.cd-horizontal-timeline'),
 /*******    main function    ******/
 $(document).ready(function(){
 	
-	/* Instruction page loading */
+	// check the cookie if visited
 	insnsOverlay();
+	
 	/* Arrow hover effects */
     $('.cd-timeline-navigation a.next').hover(function(){ $(this).animate({height:'70px'}, 'medium');}, 
     function() { $(this).animate({height:'48px'},'medium');});
