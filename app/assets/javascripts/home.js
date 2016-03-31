@@ -277,7 +277,6 @@ function checkMQ() {
 function insnsOverlay() {
     $(document).on('tap', function() {
     $('#insns-overlay-wrapper').fadeOut(300);
-    console.log("haha");
     });  
     
 	$(document).on('click','#insns-overlay-wrapper', function() {

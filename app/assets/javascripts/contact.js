@@ -149,11 +149,15 @@ function displayTime() {
 
 /*******    Overlay functions    ******/
 function contactOverlay() {
+	$('#contact').on('tap',function() {
+        $('#overlay-contact, .social, .content').fadeIn(500)
+    });
+    
 	$('#contact').on('click', function() {
 		$('#overlay-contact, .social, .content').fadeIn(500);
 	});
 	
-	$(document).on('tap',function() {
+	$(document).on('taphold',function() {
         $('#overlay-contact, .social, .content').fadeOut(300)
     });
     
