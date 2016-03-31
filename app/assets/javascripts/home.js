@@ -278,4 +278,8 @@ function insnsOverlay() {
 	$(document).on('click','#insns-overlay-wrapper', function() {
         $('#insns-overlay-wrapper').fadeOut(300);
     });
+    
+    $(document).on('tap','#insns-overlay-wrapper', function() {
+        $('#insns-overlay-wrapper').fadeOut(300);
+    });
 }

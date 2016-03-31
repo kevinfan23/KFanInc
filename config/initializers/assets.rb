@@ -10,7 +10,7 @@ Rails.application.config.assets.precompile += %w( hover-min.css )
 
 Rails.application.config.assets.precompile += %w( modernizr.js )
 Rails.application.config.assets.precompile += %w( jquery-2.1.4.js )
-Rails.application.config.assets.precompile += %w( jquery.mobile.custom.min.js )
+Rails.application.config.assets.precompile += %w( jquery.mobile-1.4.5.min.js )
 Rails.application.config.assets.precompile += %w( jquery.simpleWeather.min.js )
 Rails.application.config.assets.precompile += %w( selectize.js )
 Rails.application.config.assets.precompile += %w( contact.js )
