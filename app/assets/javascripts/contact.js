@@ -157,7 +157,7 @@ function contactOverlay() {
 		$('#overlay-contact, .social, .content').fadeIn(500);
 	});
 	
-	$(document).on('taphold',function() {
+	$('#overlay-contact').on('tap',function() {
         $('#overlay-contact, .social, .content').fadeOut(300)
     });
     
