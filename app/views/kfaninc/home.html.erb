@@ -4,7 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<%= stylesheet_link_tag "reset", media: "all", "data-turbolinks-track" => true %>  	
+	<%= stylesheet_link_tag "reset", media: "all", "data-turbolinks-track" => true %>
+	<%= stylesheet_link_tag "hover-min", media: "all", "data-turbolinks-track" => true %>  	  	
 	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
   	<%= javascript_include_tag "modernizr.js", "data-turbolinks-track" => true %>
 	<% @title = "KFan" %></head>
@@ -177,6 +178,22 @@ Thanks for writing.  It was good to hear from you!
 			</li>
 		</ol>
 	</div>
+</section>
+
+<section class="mobile">
+	<div class="mobile-container">
+		<h2>Hi! My name is Zixuan(Kevin) Fan，<span class="chinese">范子暄</span>. Welcome to my personal page! If you want to learn more about me, please swipe down/click on the arrow below</h2>
+		<br>
+			<h2>// Or, you can <%= link_to "View my Résumé", "http://kfaninc.com" %></h2>
+		<ul class="mobile-social">
+			<li><a href="https://github.com/kevinfan23" target="_blank"><span class="entypo-github hvr-grow-rotate"></span></a></li>
+			<li><a href="https://www.linkedin.com/in/zixuan-kevin-fan-85492226" target="_blank"><span class="entypo-linkedin hvr-grow-rotate"></span></a></li>
+			<li><a href="mailto:kevinfan23@ucla.edu"><span class="entypo-mail hvr-grow-rotate"></span></a></li>
+			<li><a href="https://www.facebook.com/kevin.fan.984" target="_blank"><span class="entypo-facebook hvr-grow-rotate"></span></a></li>
+			<li><a href="https://www.instagram.com/kfan23/" target="_blank"><span class="entypo-instagrem hvr-grow-rotate"></span></a></li>
+		</ul>
+	</div>
+	<a href="#" id="arrow-down"><%=image_tag "arrow-down.png", class: "floating"%></a>
 </section>
 
 <%= javascript_include_tag "home", "data-turbolinks-track" => true %>
