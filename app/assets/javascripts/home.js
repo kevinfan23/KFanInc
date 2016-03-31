@@ -275,11 +275,12 @@ function checkMQ() {
 }
 
 function insnsOverlay() {
-	$(document).on('click','#insns-overlay-wrapper', function() {
-        $('#insns-overlay-wrapper').fadeOut(300);
-    });
+    $(document).on('tap', function() {
+    $('#insns-overlay-wrapper').fadeOut(300);
+    console.log("haha");
+    });  
     
-    $(document).on('tap','#insns-overlay-wrapper', function() {
+	$(document).on('click','#insns-overlay-wrapper', function() {
         $('#insns-overlay-wrapper').fadeOut(300);
     });
 }

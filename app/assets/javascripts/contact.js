@@ -153,6 +153,10 @@ function contactOverlay() {
 		$('#overlay-contact, .social, .content').fadeIn(500);
 	});
 	
+	$(document).on('tap',function() {
+        $('#overlay-contact, .social, .content').fadeOut(300)
+    });
+    
 	$(document).on('click','#overlay-contact',function() {
         $('#overlay-contact, .social, .content').fadeOut(300)
     });
