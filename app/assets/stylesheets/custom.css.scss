@@ -1517,7 +1517,6 @@ ul.mobile-social a {
 	img {
 		float: left;
 		margin-top: 35px;
-		margin-left: 50px;
 	}
 	
 	h4 {
@@ -1525,14 +1524,14 @@ ul.mobile-social a {
 		font-size: 28px;
 		font-weight: 300;
 		margin-top: 100px;
-		margin-left: 200px;
+		margin-left: 30vw;
 	}
 }
 
 .mobile-cells li:nth-child(1) {
 	background: #fff;
 	height: 80px;
-	
+		
 	p {
 		color: #3c3c3c;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -1549,12 +1548,16 @@ ul.mobile-social a {
 	
 	img {
 		margin-top: 80px;
-		margin-left: 75px;
+		margin-left: 5vw;
 	}
 }
 
 .mobile-cells li:nth-child(3) {
 	background: #B9E3F3;
+	
+	img {
+		margin-left:1vw;
+	}
 }
 
 .mobile-cells li:nth-child(4) {
@@ -1562,7 +1565,7 @@ ul.mobile-social a {
 	
 	img {
 		margin-top: 50px;
-		margin-left: 60px;
+		margin-left: 4vw;
 	}
 }
 
@@ -1571,7 +1574,7 @@ ul.mobile-social a {
 	
 	img {
 		margin-top: 70px;
-		margin-left: 75px;
+		margin-left: 8vw;
 	}
 }
 
@@ -1580,6 +1583,7 @@ ul.mobile-social a {
 	
 	img {
 		margin-top: 60px;
+		margin-left: 4vw;
 	}
 }
 

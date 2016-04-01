@@ -9,7 +9,6 @@ $(document).ready(function(){
 	
 	// check the cookie if visited
 	insnsOverlay();
-	
 	/* Arrow hover effects */
     $('.cd-timeline-navigation a.next').hover(function(){ $(this).animate({height:'70px'}, 'medium');}, 
     function() { $(this).animate({height:'48px'},'medium');});
@@ -18,9 +17,7 @@ $(document).ready(function(){
     function() { $(this).animate({height:'46px'},'medium');});
     
     (timelines.length > 0) && initTimeline(timelines);
-	showNewContent();
-	mobileSwipe();
-	
+	showNewContent();	
 });
 
 /*******    Timeline functions    ******/
