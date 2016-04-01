@@ -25,4 +25,7 @@ class KfanincController < ApplicationController
   
   def web
   end
+  
+  def mobile
+  end
 end

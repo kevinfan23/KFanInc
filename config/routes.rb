@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   
   get 'web' => 'kfaninc#web'
 
+  get 'mobile' => 'kfaninc#mobile'
+
 
 
   

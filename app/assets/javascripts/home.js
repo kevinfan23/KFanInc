@@ -19,6 +19,7 @@ $(document).ready(function(){
     
     (timelines.length > 0) && initTimeline(timelines);
 	showNewContent();
+	mobileSwipe();
 	
 });
 
@@ -282,4 +283,10 @@ function insnsOverlay() {
 	$(document).on('click','#insns-overlay-wrapper', function() {
         $('#insns-overlay-wrapper').fadeOut(300);
     });
+}
+
+function mobileSwipe() {
+    $(document).on('tap', function() {
+		console.log("ahha");
+	});
 }
