@@ -1,28 +1,15 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<script src="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-<div class='menu'>
-  <input class='menu-toggler' id='menu-toggler' type='checkbox'>
-  <label for='menu-toggler'></label>
-  <ul>
-    <li class='menu-item'>
-      <a class='fa fa-facebook' href='https://www.facebook.com/' target='_blank'></a>
-    </li>
-    <li class='menu-item'>
-      <a class='fa fa-google' href='https://www.drive.google.com/' target='_blank'></a>
-    </li>
-    <li class='menu-item'>
-		<%= link_to "", map_path, class: "fa fa-map-o"%>
-    </li>
-    <li class='menu-item'>
-      <a class='fa fa-object-group' href='#' id="utilities"></a>
-    </li>
-    <li class='menu-item'>
-      <a class='fa fa-mortar-board' href='https://ccle.ucla.edu/' target='_blank'></a>
-    </li>
-    <li class='menu-item'>
-      <a class='fa fa-amazon' href='https://amazon.com/' target='_blank'></a>
-    </li>
-  </ul>
-</div>
 
+<div class="menu">
+	<%= link_to image_tag("close.png", height: "30"), about_path, :id => "close"%>
+
+	<div class="menu-icons">
+		<a href="#" class="fa-object-group" id="utilities"><span>Utilities</span></a>
+		<a href="http://kfaninc.herokuapp.com/map" class="fa-map-signs"><span>Map</span></a>
+		<a href="https://drive.google.com" class="fa fa-google" target="_blank"><span>Google</span></a>
+		<a href="https://ccle.ucla.edu" class="fa-mortar-board" target="_blank"><span>CCLE</span></a>
+		<a href="https://dribbble.com" class="fa fa-dribbble" target="_blank"><span>Dribbble</span></a>
+		<a href="http://codepen.io" class="fa fa-codepen" target="_blank"><span>CodePen</span></a>
+	</div>
+</div>
 <%= javascript_include_tag "//code.jquery.com/ui/1.11.4/jquery-ui.js" %>
