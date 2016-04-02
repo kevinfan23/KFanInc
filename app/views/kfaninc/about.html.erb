@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%= stylesheet_link_tag "hover-min", media: "all", "data-turbolinks-track" => true %>  	  	
 	<%= stylesheet_link_tag "custom", media: "all", "data-turbolinks-track" => true %>  
-	<%= stylesheet_link_tag "https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.1/css/selectize.css" %> 
 	<%= javascript_include_tag "modernizr.js", "data-turbolinks-track" => true %> 
 	<% @title = "KFan > About" %></head>
 </head>
@@ -16,33 +16,61 @@
 <%= render 'layouts/contact' %>
 <%= render 'layouts/utilities' %>
 
-<div class="list-switcher main">
-  <div class="list-switcher_lists chunk" id="panel-type">
-    <label>I'd like to hear about...</label>
-    <div class="toggle-button">
-      <label class="toggle-button_option js-checked">
-        <input name="audience" value="designList" type="radio" checked="checked" id="panel-type_designer">
-        <span>Design</span>
-      </label>
-      <label class="toggle-button_option">
-        <input name="audience" value="devList" type="radio" id="panel-type_developer">
-        <span>Development</span>
-      </label>
-    </div>
-  </div>
-  <div class="list-switcher_select chunk">
-				<div class="control-group">
-					<label for="panel-category">Specialized in...</label>
-					<select id="panel-category" class="demo-default" onchange="loadSelection()" placeholder="Select an area you're interested in...">
-					    <option value="#">Value 1</option>
-					    <option value="#">Value 2</option>
-					    <option value="#">Value 3</option>
-					</select>
-				</div>
+<div id='ipad'>
+  <span></span>
 </div>
+
+<div class="mobile-window">
+<ul class="mobile-cells" id="ipad-cells">
+  <li id="kfan-profile">
+	<div class="mobile-cell-container">
+		<%= image_tag "burger.png", size: "40", :id => "burger"%>
+		<p id="ipad-menu">Portfolio</p>
+		<span id="kfan-profile"><%= image_tag "kfan-profile.jpg", size: "100"%></span>
+		<div>
+		<h4 id="name">Zixuan (Kevin) Fan</h4>
+		<p id="name-des">Pirate, Engineer, Developer, Designer</p>	
+		</div>
+	</div>
+  </li>
+    <li>
+  </li>
+  <li>
+	<a href ="http://kfaninc.herokuapp.com/ee" class="mobile-cell-container hvr-glow">
+		<h4>My Journey</h4>
+		<p class="work-des">Since 1993</p>	
+	</a>
+  </li>
+    <li>
+	<a href="http://kfaninc.herokuapp.com/graphics" class="mobile-cell-container hvr-glow">
+		<span class="mobile-dots"></span>
+		<h4 class="sub-name">Electrical Engineering</h4>
+		<p class="work-des">Finding my passion in EE is like a long dream that finally came true</p>	
+	</a>
+  </li>
+    <li>
+	<a href="http://kfaninc.herokuapp.com/web" class="mobile-cell-container hvr-glow">
+		<span class="mobile-dots" style="background: #49c37c;"></span>
+		<h4 class="sub-name">UI / UX</h4>
+		<p class="work-des">Express the unexpressive</p>	
+	</a>
+  </li>
+  <li>
+	<a href="http://kfaninc.herokuapp.com/ios" class="mobile-cell-container hvr-glow">
+		<span class="mobile-dots" style="background: #fff000;"></span>
+		<h4 class="sub-name">Front End Development</h4>
+		<p class="work-des">The perfect canvas for our imaginations</p>	
+	</a>
+  </li>
+    <li>
+	<a class="mobile-cell-container hvr-glow" id="ios-cell">
+		<span class="mobile-dots" style="background: #57c6e1;"></span>
+		<h4 class="sub-name">iOS Development</h4>
+		<p class="work-des">The platform that makes everything so accessible and intimate</p>	
+	</a>
+  </li>
+</ul>
 </div>
-<%= javascript_include_tag "selectize", "data-turbolinks-track" => true %>
-<%= javascript_include_tag "about", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "nav", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "contact", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "utilities", "data-turbolinks-track" => true %>

@@ -5,13 +5,11 @@ Rails.application.config.assets.version = '1.0'
 
 Rails.application.config.assets.precompile += %w( custom.css )
 Rails.application.config.assets.precompile += %w( reset.css )
-Rails.application.config.assets.precompile += %w( selectize.css )
 Rails.application.config.assets.precompile += %w( hover-min.css )
 
 Rails.application.config.assets.precompile += %w( modernizr.js )
 Rails.application.config.assets.precompile += %w( jquery-2.1.4.js )
 Rails.application.config.assets.precompile += %w( jquery.simpleWeather.min.js )
-Rails.application.config.assets.precompile += %w( selectize.js )
 Rails.application.config.assets.precompile += %w( contact.js )
 Rails.application.config.assets.precompile += %w( utilities.js )
 Rails.application.config.assets.precompile += %w( home.js )
