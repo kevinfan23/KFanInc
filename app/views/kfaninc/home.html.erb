@@ -195,6 +195,31 @@ Thanks for writing.  It was good to hear from you!
 	</div>
 	<a href="http://kfaninc.com/mobile" id="arrow-down"><%=image_tag "arrow-down.png", class: "floating"%></a>
 </section>
+<script>
+	function GetCookie(name) {
+		var arg=name+"=";
+		var alen=arg.length;
+		var clen=document.cookie.length;
+		var i=0;
+		
+		while (i<clen) {
+		var j=i+alen;
+		if (document.cookie.substring(i,j)==arg)
+			return "here";
+		i=document.cookie.indexOf(" ",i)+1;
+		if (i==0) break;
+  		}
+  		return null;
+	}
+
+	var visit=GetCookie("ZZZZZ");
+	if (visit!=null){
+		$('#insns-overlay-wrapper').hide();		
+		var expire=new Date();
+		expire=new Date(expire.getTime()+7);
+		document.cookie="ZZZZZ=here; expires="+expire;
+	}
+</script>
 <%= javascript_include_tag "home", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "nav", "data-turbolinks-track" => true %>
 <%= javascript_include_tag "contact", "data-turbolinks-track" => true %>
