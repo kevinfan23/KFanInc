@@ -6,9 +6,16 @@ var timelines = $('.cd-horizontal-timeline'),
 
 /*******    main function    ******/
 $(document).ready(function(){
-	
-	// check the cookie if visited
 	insnsOverlay();
+	// check the cookie if visited
+	var visit=GetCookie("ZZZZZ");
+	if (visit!=null){
+        $('#insns-overlay-wrapper').fadeOut();
+		var expire=new Date();
+		expire=new Date(expire.getTime()+7776000000);
+		document.cookie="ZZZZZ=here; expires="+expire;
+	}
+
 	/* Arrow hover effects */
     $('.cd-timeline-navigation a.next').hover(function(){ $(this).animate({height:'70px'}, 'medium');}, 
     function() { $(this).animate({height:'48px'},'medium');});
@@ -282,8 +289,19 @@ function insnsOverlay() {
     });
 }
 
-function mobileSwipe() {
-    $(document).on('tap', function() {
-		console.log("ahha");
-	});
-}
+
+	function GetCookie(name) {
+		var arg=name+"=";
+		var alen=arg.length;
+		var clen=document.cookie.length;
+		var i=0;
+		
+		while (i<clen) {
+		var j=i+alen;
+		if (document.cookie.substring(i,j)==arg)
+			return "here";
+		i=document.cookie.indexOf(" ",i)+1;
+		if (i==0) break;
+  		}
+  		return null;
+	}
