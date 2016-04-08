@@ -2260,11 +2260,19 @@ p.url {
 		}
 	}
 	
-		#widget-weather {
-			background: linear-gradient(135deg, rgba(232, 144, 142, 1) 0%,#2a8be4 100%);		
+	#widget-weather {
+		background: linear-gradient(135deg, rgba(232, 144, 142, 1) 0%,#2a8be4 100%);		
 		img {
 			width: 300px;
 			margin-top: 120px;
+		}
+	}
+		
+	#widget-snow {
+		background: linear-gradient(135deg, #656363 0%,rgba(0, 0, 0, 0.7) 100%);		
+		img {
+			width: 300px;
+			margin-top: 20px;
 		}
 	}
 	
